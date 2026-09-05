@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://satyamt37.github.io/Consulting_firm/sitemap.xml

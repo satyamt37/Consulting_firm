@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050A16"/><stop offset="1" stop-color="#0F1B33"/>
+    </linearGradient>
+    <linearGradient id="mk" x1="80" y1="70" x2="152" y2="142" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B6BFF"/><stop offset="1" stop-color="#7C5CFF"/>
+    </linearGradient>
+    <radialGradient id="gl" cx="0" cy="0" r="1" gradientTransform="translate(980 110) rotate(120) scale(430)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B6BFF" stop-opacity=".55"/><stop offset="1" stop-color="#3B6BFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gl2" cx="0" cy="0" r="1" gradientTransform="translate(150 610) rotate(-60) scale(400)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#12CFA0" stop-opacity=".38"/><stop offset="1" stop-color="#12CFA0" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#gl)"/>
+  <rect width="1200" height="630" fill="url(#gl2)"/>
+
+  <rect x="80" y="70" width="72" height="72" rx="20" fill="url(#mk)"/>
+  <path d="M116 87.5l19.8 10.8L116 109.1 96.2 98.3 116 87.5Z" fill="#fff" opacity=".95"/>
+  <path d="M96.2 108l19.8 10.8L135.8 108" stroke="#fff" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity=".6"/>
+  <path d="M96.2 117.7l19.8 10.8 19.8-10.8" stroke="#12CFA0" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <text x="172" y="106" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="38" font-weight="700" fill="#ffffff" letter-spacing="-1">STRATIQ</text>
+  <text x="172" y="132" font-family="Consolas,monospace" font-size="14" font-weight="500" fill="#8C9AB8" letter-spacing="4.5">CLOUD · DATA · AI</text>
+
+  <text x="80" y="290" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="76" font-weight="700" fill="#ffffff" letter-spacing="-2.6">Salesforce. Snowflake.</text>
+  <text x="80" y="376" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="76" font-weight="700" fill="#ffffff" letter-spacing="-2.6">Oracle. And AI that</text>
+  <text x="80" y="462" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="76" font-weight="700" fill="#3EE6BB" letter-spacing="-2.6">actually ships.</text>
+
+  <text x="80" y="536" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="25" fill="#9DAAC6">IT consulting from Texas and India — projects, dedicated pods,</text>
+  <text x="80" y="572" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="25" fill="#9DAAC6">staff augmentation, job support and freelance work.</text>
+
+  <rect x="1010" y="510" width="112" height="40" rx="20" fill="#12CFA0"/>
+  <text x="1066" y="536" font-family="Consolas,monospace" font-size="14" font-weight="700" fill="#03251C" letter-spacing="1.5" text-anchor="middle">DEFT AI</text>
+</svg>
