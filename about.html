@@ -29,6 +29,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 
@@ -62,6 +64,10 @@
 <body>
 
 <a class="skip" href="#main">Skip to content</a>
+
+<!-- scroll progress + film grain -->
+<div class="progress" aria-hidden="true"><div class="progress__bar"></div></div>
+<div class="grain" aria-hidden="true"></div>
 
 <!-- ====================== ANNOUNCEMENT ====================== -->
 <div class="announce">
@@ -190,6 +196,9 @@
 <main id="main">
 <!-- ============================ PAGE HERO ============================ -->
 <section class="phero">
+  <div class="photo-bg" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?w=1920&q=70&auto=format&fit=crop" alt="" loading="eager" fetchpriority="high" decoding="async" width="1920" height="1080">
+  </div>
   <div class="hero__bg" aria-hidden="true">
     <div class="hero__grid"></div>
     <div class="hero__glow hero__glow--a"></div>
@@ -226,6 +235,10 @@
         <p class="lede mt-16">There is a size of company that global systems integrators serve badly and freelancers cannot serve at all.</p>
         <p class="mt-16 muted">You need someone who has genuinely migrated a warehouse before, who understands what a Salesforce org looks like after five years of accumulated shortcuts, who can write the Java service and the dbt model and the page that ranks for it. But you cannot absorb a tier-one integrator's overhead, their six-week response cycle, or a delivery team you meet for the first time after signature.</p>
         <p class="mt-16 muted">Stratiq Cloud was set up for exactly that position. A senior architect in the US who stays on your engagement from the first call to the last. An engineering core in India that gives you scale without giving you a timezone problem. And a commercial model flexible enough to start with a single freelance task if that is all the risk you want to take today.</p>
+        <div class="media media--3-2 media--lift mt-32">
+          <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1000&q=70&auto=format&fit=crop" alt="An open-plan consulting office with city views" loading="lazy" decoding="async" width="1000" height="667">
+          <span class="media__cap"><b>Texas HQ, three India delivery centres</b>One delivery organisation, one set of standards, two geographies.</span>
+        </div>
         <div class="btn-row mt-32">
           <a class="btn btn--dark" href="work.html">See what we have delivered</a>
           <a class="btn btn--ghost" href="contact.html">Talk to us</a>
@@ -233,7 +246,7 @@
       </div>
 
       <div class="reveal" data-delay="90">
-        <div class="card card--feature card--pad-lg">
+        <div class="card spot card--feature card--pad-lg">
           <span class="card__num">In brief</span>
           <div class="dl">
             <div class="dl__row"><dt>Headquarters</dt><dd>Frisco, Texas, United States</dd></div>
@@ -251,7 +264,8 @@
 </section>
 
 <!-- ============================ VALUES ============================ -->
-<section class="section section--dark">
+<section class="section section--dark has-bg">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap">
     <div class="section__head reveal">
       <span class="eyebrow">How we operate</span>
@@ -260,32 +274,32 @@
     </div>
 
     <div class="grid grid--3">
-      <article class="card card--glass reveal">
+      <article class="card spot card--glass reveal">
         <span class="card__num">01</span>
         <h3 class="h-sm">The people you meet are the people you get</h3>
         <p>The architect in the pitch is the architect on the project. If someone has to change, we tell you before it happens and introduce their replacement properly.</p>
       </article>
-      <article class="card card--glass reveal" data-delay="60">
+      <article class="card spot card--glass reveal" data-delay="60">
         <span class="card__num">02</span>
         <h3 class="h-sm">We say no to work we should not take</h3>
         <p>If your problem is too small for our fee, outside our depth, or better solved without us, you will hear that on the first call. It costs us revenue and buys us referrals.</p>
       </article>
-      <article class="card card--glass reveal" data-delay="120">
+      <article class="card spot card--glass reveal" data-delay="120">
         <span class="card__num">03</span>
         <h3 class="h-sm">Bad news travels fast</h3>
         <p>Slippage, a wrong estimate, a discovery that changes the plan — you hear it the week it happens, not at the steering committee a month later.</p>
       </article>
-      <article class="card card--glass reveal">
+      <article class="card spot card--glass reveal">
         <span class="card__num">04</span>
         <h3 class="h-sm">Documentation is a deliverable</h3>
         <p>Runbooks, decision records and handover notes ship with the code, not after it. You should be able to end the engagement and still run the system.</p>
       </article>
-      <article class="card card--glass reveal" data-delay="60">
+      <article class="card spot card--glass reveal" data-delay="60">
         <span class="card__num">05</span>
         <h3 class="h-sm">No lock-in, ever</h3>
         <p>Your code, your cloud accounts, your repositories, your credentials. Our accelerators are licensed to you perpetually and their source ships with the project.</p>
       </article>
-      <article class="card card--glass reveal" data-delay="120">
+      <article class="card spot card--glass reveal" data-delay="120">
         <span class="card__num">06</span>
         <h3 class="h-sm">Change requests are priced, not weaponised</h3>
         <p>Scope changes at the rate card you already signed. We do not bid low and recover it in variations — that game is obvious to everyone and poisons the relationship.</p>
@@ -346,7 +360,7 @@
     </div>
 
     <div class="grid grid--4">
-      <div class="office reveal">
+      <div class="office spot reveal">
         <span class="office__flag" aria-hidden="true">🇺🇸</span>
         <span class="office__tag office__tag--hq">Global headquarters</span>
         <h3>Frisco, Texas</h3>
@@ -359,7 +373,7 @@
         </div>
       </div>
 
-      <div class="office reveal" data-delay="70">
+      <div class="office spot reveal" data-delay="70">
         <span class="office__flag" aria-hidden="true">🇮🇳</span>
         <span class="office__tag">Delivery centre</span>
         <h3>Hyderabad</h3>
@@ -371,7 +385,7 @@
         </div>
       </div>
 
-      <div class="office reveal" data-delay="140">
+      <div class="office spot reveal" data-delay="140">
         <span class="office__flag" aria-hidden="true">🇮🇳</span>
         <span class="office__tag">Delivery centre</span>
         <h3>Pune</h3>
@@ -383,7 +397,7 @@
         </div>
       </div>
 
-      <div class="office reveal" data-delay="210">
+      <div class="office spot reveal" data-delay="210">
         <span class="office__flag" aria-hidden="true">🇮🇳</span>
         <span class="office__tag">Delivery centre</span>
         <h3>Bengaluru</h3>
@@ -399,7 +413,8 @@
 </section>
 
 <!-- ============================ COMPLIANCE ============================ -->
-<section class="section section--ink2">
+<section class="section section--ink2 has-bg">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap">
     <div class="split split--wide-l">
       <div class="reveal">
@@ -411,20 +426,20 @@
         </div>
       </div>
       <div class="grid grid--2 reveal" data-delay="90">
-        <div class="card card--glass"><h3 class="h-sm">Contracts</h3><p>Mutual NDA as standard, MSA plus statement of work per engagement, BAAs for healthcare work, and DPAs where personal data is processed.</p></div>
-        <div class="card card--glass"><h3 class="h-sm">Access</h3><p>Least-privilege access to your systems, named individuals only, revoked on rotation. We work in your repositories and cloud accounts by preference.</p></div>
-        <div class="card card--glass"><h3 class="h-sm">Devices</h3><p>Managed endpoints with disk encryption and MDM. We support VDI, jump hosts and locked-down client-supplied laptops where required.</p></div>
-        <div class="card card--glass"><h3 class="h-sm">Residency</h3><p>Engagements can be restricted to US-based personnel, or to data that never leaves a nominated region. Agreed in writing before kick-off.</p></div>
-        <div class="card card--glass"><h3 class="h-sm">People</h3><p>Background checks and right-to-work verification before anyone is placed. References available for every profile we present.</p></div>
-        <div class="card card--glass"><h3 class="h-sm">AI usage</h3><p>Enterprise endpoints with training disabled. Client data is never used to improve a model, and every data path is documented.</p></div>
+        <div class="card spot card--glass"><h3 class="h-sm">Contracts</h3><p>Mutual NDA as standard, MSA plus statement of work per engagement, BAAs for healthcare work, and DPAs where personal data is processed.</p></div>
+        <div class="card spot card--glass"><h3 class="h-sm">Access</h3><p>Least-privilege access to your systems, named individuals only, revoked on rotation. We work in your repositories and cloud accounts by preference.</p></div>
+        <div class="card spot card--glass"><h3 class="h-sm">Devices</h3><p>Managed endpoints with disk encryption and MDM. We support VDI, jump hosts and locked-down client-supplied laptops where required.</p></div>
+        <div class="card spot card--glass"><h3 class="h-sm">Residency</h3><p>Engagements can be restricted to US-based personnel, or to data that never leaves a nominated region. Agreed in writing before kick-off.</p></div>
+        <div class="card spot card--glass"><h3 class="h-sm">People</h3><p>Background checks and right-to-work verification before anyone is placed. References available for every profile we present.</p></div>
+        <div class="card spot card--glass"><h3 class="h-sm">AI usage</h3><p>Enterprise endpoints with training disabled. Client data is never used to improve a model, and every data path is documented.</p></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============================ CTA ============================ -->
-<section class="cta">
-  <div class="cta__glow" aria-hidden="true"></div>
+<section class="cta has-bg">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap cta__in">
     <h2 class="h-xl">Come and test the claims on this page</h2>
     <p class="lede">Thirty minutes with a senior consultant. Ask the awkward questions — about scope, about rates, about what happens when something goes wrong.</p>
@@ -527,7 +542,9 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
 </button>
 
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
 <script src="assets/js/config.js"></script>
+<script src="assets/js/motion.js" defer></script>
 <script src="assets/js/site.js" defer></script>
 </body>
 </html>

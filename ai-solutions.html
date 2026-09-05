@@ -29,6 +29,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 
@@ -62,6 +64,10 @@
 <body>
 
 <a class="skip" href="#main">Skip to content</a>
+
+<!-- scroll progress + film grain -->
+<div class="progress" aria-hidden="true"><div class="progress__bar"></div></div>
+<div class="grain" aria-hidden="true"></div>
 
 <!-- ====================== ANNOUNCEMENT ====================== -->
 <div class="announce">
@@ -190,6 +196,9 @@
 <main id="main">
 <!-- ============================ PAGE HERO ============================ -->
 <section class="phero">
+  <div class="photo-bg" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&q=70&auto=format&fit=crop" alt="" loading="eager" fetchpriority="high" decoding="async" width="1920" height="1080">
+  </div>
   <div class="hero__bg" aria-hidden="true">
     <div class="hero__grid"></div>
     <div class="hero__glow hero__glow--a"></div>
@@ -238,7 +247,7 @@
       </div>
 
       <div class="reveal" data-delay="90">
-        <div class="card card--feature card--pad-lg">
+        <div class="card spot card--feature card--pad-lg">
           <span class="card__num">Our position</span>
           <h3 class="h-md">We would rather kill a use case in week two than in month nine</h3>
           <p class="mt-16">Roughly one in three AI ideas we assess should not be built — the value is too thin, the data is not there, or a rules engine does the job for a fraction of the cost. We say that out loud during discovery, and the fee for discovery is the same either way.</p>
@@ -256,7 +265,8 @@
 </section>
 
 <!-- ============================ CAPABILITIES ============================ -->
-<section class="section section--dark">
+<section class="section section--dark has-bg">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap">
     <div class="section__head reveal">
       <span class="eyebrow">What we build</span>
@@ -265,47 +275,59 @@
     </div>
 
     <div class="grid grid--3">
-      <article class="card card--glass reveal">
+      <article class="card spot card--glass reveal">
         <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
         <h3 class="h-sm">Grounded assistants</h3>
         <p>Question answering over your own content — policies, contracts, tickets, product data, warehouse tables. Answers carry citations, and "I do not know" is a valid, expected response.</p>
         <div class="tags"><span class="tag">RAG</span><span class="tag">Hybrid search</span><span class="tag">Citations</span></div>
       </article>
 
-      <article class="card card--glass reveal" data-delay="70">
+      <article class="card spot card--glass reveal" data-delay="70">
         <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M10 6.5h4a3 3 0 0 1 3 3V14M6.5 10v4a3 3 0 0 0 3 3H14"/></svg></span>
         <h3 class="h-sm">Agentic workflows</h3>
         <p>Multi-step processes where the model calls real tools — look up an account, price a quote, raise a case, update a record. With approval gates, step traces and spend caps.</p>
         <div class="tags"><span class="tag">Tool calling</span><span class="tag">Approvals</span><span class="tag">Traces</span></div>
       </article>
 
-      <article class="card card--glass reveal" data-delay="140">
+      <article class="card spot card--glass reveal" data-delay="140">
         <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg></span>
         <h3 class="h-sm">Document intelligence</h3>
         <p>Invoices, claims, statements, contracts and forms into structured records. Confidence scores route the uncertain cases to a human instead of guessing quietly.</p>
         <div class="tags"><span class="tag">Extraction</span><span class="tag">Classification</span><span class="tag">HITL</span></div>
       </article>
 
-      <article class="card card--glass reveal">
+      <article class="card spot card--glass reveal">
         <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 3.5-4 3 2.5L20 7"/></svg></span>
         <h3 class="h-sm">Prediction &amp; forecasting</h3>
         <p>Demand, churn, propensity, credit and anomaly models. Often the right answer where a language model would be expensive theatre — and we will say so.</p>
         <div class="tags"><span class="tag">Gradient boosting</span><span class="tag">Time series</span><span class="tag">MLOps</span></div>
       </article>
 
-      <article class="card card--glass reveal" data-delay="70">
+      <article class="card spot card--glass reveal" data-delay="70">
         <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/><path d="m9 13 2 2 4-4"/></svg></span>
         <h3 class="h-sm">Platform-native AI</h3>
         <p>Salesforce Agentforce and Einstein, Snowflake Cortex, Oracle AI services. When the platform already has the primitives, using them beats building a parallel stack.</p>
         <div class="tags"><span class="tag">Agentforce</span><span class="tag">Cortex</span><span class="tag">Einstein</span></div>
       </article>
 
-      <article class="card card--glass reveal" data-delay="140">
+      <article class="card spot card--glass reveal" data-delay="140">
         <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg></span>
         <h3 class="h-sm">LLMOps &amp; evaluation</h3>
         <p>The unglamorous half: eval sets, regression gates in CI, prompt versioning, guardrails, red-teaming, drift alerts and cost telemetry per feature.</p>
         <div class="tags"><span class="tag">Evals</span><span class="tag">Guardrails</span><span class="tag">Observability</span></div>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- image band -->
+<section class="section section--tight section--soft">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="media media--wide media--frame media--lift">
+        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=1400&q=70&auto=format&fit=crop" alt="Evaluation dashboards on a monitor" loading="lazy" decoding="async" width="1400" height="600">
+        <span class="media__cap"><b>Measured, not asserted</b>Accuracy, refusal rate, latency and cost per answer — reported weekly, gated in CI.</span>
+      </div>
     </div>
   </div>
 </section>
@@ -320,25 +342,25 @@
     </div>
 
     <div class="grid grid--4">
-      <article class="card reveal">
+      <article class="card spot reveal">
         <span class="card__num">Stage 01 · 2 weeks</span>
         <h3 class="h-sm">Discovery</h3>
         <p>Use-case inventory, data readiness assessment, risk and compliance constraints, value estimate per case, and a recommendation on what to pilot first.</p>
         <ul class="ticks"><li>Fixed price</li><li>Written deliverable</li><li>Yours to keep</li></ul>
       </article>
-      <article class="card reveal" data-delay="70">
+      <article class="card spot reveal" data-delay="70">
         <span class="card__num">Gate · Stage 02 · 4–6 weeks</span>
         <h3 class="h-sm">Pilot</h3>
         <p>One use case built on your real data, against an evaluation set agreed before we start. Ends with measured accuracy, cost per answer and a clear go/no-go.</p>
         <ul class="ticks"><li>Eval set agreed up front</li><li>Real data, real users</li><li>Go/no-go number</li></ul>
       </article>
-      <article class="card reveal" data-delay="140">
+      <article class="card spot reveal" data-delay="140">
         <span class="card__num">Stage 03 · 4–8 weeks</span>
         <h3 class="h-sm">Harden</h3>
         <p>Guardrails, fallbacks, rate and spend limits, audit logging, human review queues, monitoring and the runbook operations will actually use at 2am.</p>
         <ul class="ticks"><li>Security review passed</li><li>Rollback tested</li><li>Runbook handed over</li></ul>
       </article>
-      <article class="card reveal" data-delay="210">
+      <article class="card spot reveal" data-delay="210">
         <span class="card__num">Gate · Stage 04 · ongoing</span>
         <h3 class="h-sm">Scale or hand over</h3>
         <p>Second and third use cases on the same foundation, or a structured handover to your team with training. Reviewed quarterly against the original numbers.</p>
@@ -359,26 +381,27 @@
         <div class="note mt-24"><strong>No lock-in, in writing.</strong> Accelerator source is delivered with the project. If you part ways with us, the system keeps running and your team can maintain it.</div>
       </div>
       <div class="grid reveal" data-delay="90">
-        <div class="card"><h3 class="h-sm">Grounded assistant kit</h3><p>Connectors for Snowflake, Salesforce, SharePoint and S3; chunking and hybrid retrieval; citation rendering; and an evaluation harness wired in from the first commit.</p></div>
-        <div class="card"><h3 class="h-sm">Agent workflow runtime</h3><p>Tool registry, approval gates, step-level tracing, retries, idempotency keys and per-tenant spend caps — the parts everyone rebuilds badly under deadline.</p></div>
-        <div class="card"><h3 class="h-sm">Eval and guardrail pack</h3><p>Golden-set management, regression gates in CI, PII redaction, jailbreak and prompt-injection tests, and dashboards for accuracy, latency and cost per feature.</p></div>
+        <div class="card spot"><h3 class="h-sm">Grounded assistant kit</h3><p>Connectors for Snowflake, Salesforce, SharePoint and S3; chunking and hybrid retrieval; citation rendering; and an evaluation harness wired in from the first commit.</p></div>
+        <div class="card spot"><h3 class="h-sm">Agent workflow runtime</h3><p>Tool registry, approval gates, step-level tracing, retries, idempotency keys and per-tenant spend caps — the parts everyone rebuilds badly under deadline.</p></div>
+        <div class="card spot"><h3 class="h-sm">Eval and guardrail pack</h3><p>Golden-set management, regression gates in CI, PII redaction, jailbreak and prompt-injection tests, and dashboards for accuracy, latency and cost per feature.</p></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============================ RESPONSIBLE AI ============================ -->
-<section class="section section--ink2">
+<section class="section section--ink2 has-bg">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap wrap--narrow">
     <div class="section__head center reveal">
       <span class="eyebrow">Responsible by default</span>
       <h2 class="h-xl">The commitments we make on every AI engagement</h2>
     </div>
     <div class="grid grid--2 reveal">
-      <div class="card card--glass"><h3 class="h-sm">Your data trains nothing</h3><p>We use enterprise endpoints with training disabled, and we document exactly where every byte travels. Where residency is a requirement, we design for it before we design anything else.</p></div>
-      <div class="card card--glass"><h3 class="h-sm">A person stays accountable</h3><p>Any action with financial, legal or clinical consequence goes through human review. Autonomy is earned use case by use case, with evidence, never assumed.</p></div>
-      <div class="card card--glass"><h3 class="h-sm">Every answer is traceable</h3><p>Inputs, retrieved context, model version, prompt version and output are logged. When someone asks why the system said that, there is an answer.</p></div>
-      <div class="card card--glass"><h3 class="h-sm">We tell you when not to use AI</h3><p>If a deterministic rule, a lookup table or a better process solves it, we recommend that instead. It costs us revenue and saves you a great deal more.</p></div>
+      <div class="card spot card--glass"><h3 class="h-sm">Your data trains nothing</h3><p>We use enterprise endpoints with training disabled, and we document exactly where every byte travels. Where residency is a requirement, we design for it before we design anything else.</p></div>
+      <div class="card spot card--glass"><h3 class="h-sm">A person stays accountable</h3><p>Any action with financial, legal or clinical consequence goes through human review. Autonomy is earned use case by use case, with evidence, never assumed.</p></div>
+      <div class="card spot card--glass"><h3 class="h-sm">Every answer is traceable</h3><p>Inputs, retrieved context, model version, prompt version and output are logged. When someone asks why the system said that, there is an answer.</p></div>
+      <div class="card spot card--glass"><h3 class="h-sm">We tell you when not to use AI</h3><p>If a deterministic rule, a lookup table or a better process solves it, we recommend that instead. It costs us revenue and saves you a great deal more.</p></div>
     </div>
   </div>
 </section>
@@ -416,8 +439,8 @@
 </section>
 
 <!-- ============================ CTA ============================ -->
-<section class="cta">
-  <div class="cta__glow" aria-hidden="true"></div>
+<section class="cta has-bg">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap cta__in">
     <h2 class="h-xl">Bring us the use case you are least sure about</h2>
     <p class="lede">Thirty minutes with the people who would build it. We will tell you whether it is an AI problem, a data problem, or a process problem wearing an AI budget.</p>
@@ -520,7 +543,9 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
 </button>
 
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
 <script src="assets/js/config.js"></script>
+<script src="assets/js/motion.js" defer></script>
 <script src="assets/js/site.js" defer></script>
 </body>
 </html>

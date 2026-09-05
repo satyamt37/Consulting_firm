@@ -182,7 +182,8 @@
     var onScroll = function () { btn.classList.toggle("is-on", window.scrollY > 700); };
     window.addEventListener("scroll", onScroll, { passive: true });
     btn.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (window.stratiqLenis) window.stratiqLenis.scrollTo(0, { duration: 1.2 });
+      else window.scrollTo({ top: 0, behavior: "smooth" });
     });
     onScroll();
   }
@@ -287,8 +288,9 @@
     });
 
     if (firstBad) {
-      firstBad.focus();
-      firstBad.scrollIntoView({ behavior: "smooth", block: "center" });
+      firstBad.focus({ preventScroll: true });
+      if (window.stratiqScrollTo) window.stratiqScrollTo(firstBad.closest(".field") || firstBad);
+      else firstBad.scrollIntoView({ behavior: "smooth", block: "center" });
     }
     return ok;
   }

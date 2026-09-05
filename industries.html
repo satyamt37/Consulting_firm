@@ -29,6 +29,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 
@@ -62,6 +64,10 @@
 <body>
 
 <a class="skip" href="#main">Skip to content</a>
+
+<!-- scroll progress + film grain -->
+<div class="progress" aria-hidden="true"><div class="progress__bar"></div></div>
+<div class="grain" aria-hidden="true"></div>
 
 <!-- ====================== ANNOUNCEMENT ====================== -->
 <div class="announce">
@@ -190,6 +196,9 @@
 <main id="main">
 <!-- ============================ PAGE HERO ============================ -->
 <section class="phero">
+  <div class="photo-bg" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=70&auto=format&fit=crop" alt="" loading="eager" fetchpriority="high" decoding="async" width="1920" height="1080">
+  </div>
   <div class="hero__bg" aria-hidden="true">
     <div class="hero__grid"></div>
     <div class="hero__glow hero__glow--a"></div>
@@ -213,7 +222,10 @@
   <div class="wrap">
     <div class="grid grid--2">
 
-      <article class="card card--pad-lg reveal">
+      <article class="card spot card--pad-lg reveal">
+        <div class="media media--16-9" style="margin-bottom:22px">
+          <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=820&q=70&auto=format&fit=crop" alt="A clean, modern hospital operating theatre" loading="lazy" decoding="async" width="820" height="461">
+        </div>
         <span class="card__ic card__ic--mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/><rect x="3" y="3" width="18" height="18" rx="4"/></svg></span>
         <h2 class="h-md">Healthcare &amp; life sciences</h2>
         <p>Payers, provider networks, digital health platforms and medical device manufacturers. The constraint is always the same: the data is sensitive, the reporting is regulated, and the clinicians will not tolerate a slow system.</p>
@@ -227,7 +239,10 @@
         <div class="tags"><span class="tag">HIPAA</span><span class="tag">HL7 / FHIR</span><span class="tag">Health Cloud</span><span class="tag">BAA</span></div>
       </article>
 
-      <article class="card card--pad-lg reveal" data-delay="70">
+      <article class="card spot card--pad-lg reveal" data-delay="70">
+        <div class="media media--16-9 media--violet" style="margin-bottom:22px">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=820&q=70&auto=format&fit=crop" alt="Glass financial-district towers seen from below" loading="lazy" decoding="async" width="820" height="461">
+        </div>
         <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M4 10h16M5 10 12 4l7 6M6 10v11M10 10v11M14 10v11M18 10v11"/></svg></span>
         <h2 class="h-md">Banking, financial services &amp; insurance</h2>
         <p>Regional banks, insurers, brokers and fintech platforms. Work here lives or dies on lineage, auditability and the ability to explain a number to a regulator two years later.</p>
@@ -241,7 +256,10 @@
         <div class="tags"><span class="tag">Lineage</span><span class="tag">SOX</span><span class="tag">FSC</span><span class="tag">Model risk</span></div>
       </article>
 
-      <article class="card card--pad-lg reveal" data-delay="140">
+      <article class="card spot card--pad-lg reveal" data-delay="140">
+        <div class="media media--16-9 media--mint" style="margin-bottom:22px">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=820&q=70&auto=format&fit=crop" alt="Interior of a modern retail store" loading="lazy" decoding="async" width="820" height="461">
+        </div>
         <span class="card__ic card__ic--amber" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></span>
         <h2 class="h-md">Retail &amp; e-commerce</h2>
         <p>Multi-channel retailers, D2C brands and marketplaces. The recurring problem is a customer who exists five times across five systems, and a forecast nobody trusts.</p>
@@ -255,7 +273,10 @@
         <div class="tags"><span class="tag">Customer 360</span><span class="tag">Forecasting</span><span class="tag">OMS</span><span class="tag">CWV</span></div>
       </article>
 
-      <article class="card card--pad-lg reveal">
+      <article class="card spot card--pad-lg reveal">
+        <div class="media media--16-9" style="margin-bottom:22px">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=820&q=70&auto=format&fit=crop" alt="Sparks from welding on a factory floor" loading="lazy" decoding="async" width="820" height="461">
+        </div>
         <span class="card__ic card__ic--rose" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V9l6 4V9l6 4V4l4 3v13"/></svg></span>
         <h2 class="h-md">Manufacturing &amp; supply chain</h2>
         <p>Discrete and process manufacturers, distributors and logistics operators. Usually an Oracle or SAP core, a plant floor that speaks a different language, and a month-end close that takes too long.</p>
@@ -269,7 +290,10 @@
         <div class="tags"><span class="tag">Oracle EBS</span><span class="tag">OT / IT</span><span class="tag">Close cycle</span></div>
       </article>
 
-      <article class="card card--pad-lg reveal" data-delay="70">
+      <article class="card spot card--pad-lg reveal" data-delay="70">
+        <div class="media media--16-9 media--violet" style="margin-bottom:22px">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=820&q=70&auto=format&fit=crop" alt="Product analytics dashboards open on a laptop" loading="lazy" decoding="async" width="820" height="461">
+        </div>
         <span class="card__ic card__ic--violet" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3M7 9l3 2-3 2M13 13h4"/></svg></span>
         <h2 class="h-md">Technology &amp; SaaS</h2>
         <p>Product companies from Series B to public. The data exists in abundance; what is missing is a single definition of a customer, a seat, and revenue.</p>
@@ -283,7 +307,10 @@
         <div class="tags"><span class="tag">Product analytics</span><span class="tag">RevOps</span><span class="tag">AI features</span></div>
       </article>
 
-      <article class="card card--pad-lg reveal" data-delay="140">
+      <article class="card spot card--pad-lg reveal" data-delay="140">
+        <div class="media media--16-9 media--mint" style="margin-bottom:22px">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=820&q=70&auto=format&fit=crop" alt="Consultants working through a plan together" loading="lazy" decoding="async" width="820" height="461">
+        </div>
         <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
         <h2 class="h-md">Professional &amp; business services</h2>
         <p>Consulting firms, staffing companies, agencies and legal practices. People are the product, so utilisation, pipeline and billing accuracy are the whole game.</p>
@@ -311,17 +338,18 @@
         <p class="lede mt-16">We are honest about the difference between deep sector expertise and solid general capability. In these areas we have delivered real work, and we will tell you on the first call which of the two you are getting.</p>
       </div>
       <div class="grid grid--2 reveal" data-delay="90">
-        <div class="card card--flat"><h3 class="h-sm">Education</h3><p>Student data platforms, CRM for admissions, reporting for accreditation.</p></div>
-        <div class="card card--flat"><h3 class="h-sm">Energy &amp; utilities</h3><p>Asset and meter data pipelines, outage reporting, field service on Salesforce.</p></div>
-        <div class="card card--flat"><h3 class="h-sm">Non-profit</h3><p>Nonprofit Cloud, donor 360, grant and programme reporting.</p></div>
-        <div class="card card--flat"><h3 class="h-sm">Real estate</h3><p>Portfolio and lease analytics, property CRM, tenant portals.</p></div>
+        <div class="card spot card--flat"><h3 class="h-sm">Education</h3><p>Student data platforms, CRM for admissions, reporting for accreditation.</p></div>
+        <div class="card spot card--flat"><h3 class="h-sm">Energy &amp; utilities</h3><p>Asset and meter data pipelines, outage reporting, field service on Salesforce.</p></div>
+        <div class="card spot card--flat"><h3 class="h-sm">Non-profit</h3><p>Nonprofit Cloud, donor 360, grant and programme reporting.</p></div>
+        <div class="card spot card--flat"><h3 class="h-sm">Real estate</h3><p>Portfolio and lease analytics, property CRM, tenant portals.</p></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============================ WHY DOMAIN MATTERS ============================ -->
-<section class="section section--dark">
+<section class="section section--dark has-bg">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap">
     <div class="section__head reveal">
       <span class="eyebrow">Why it matters</span>
@@ -329,16 +357,16 @@
       <p class="lede mt-16">Domain knowledge is not a marketing line — it shows up as time you do not spend.</p>
     </div>
     <div class="grid grid--3">
-      <article class="card card--glass reveal"><span class="card__num">01</span><h3 class="h-sm">Faster discovery</h3><p>We already know what a remittance file, an eligibility feed or a bill of materials looks like. Discovery goes to the hard questions instead of the definitions.</p></article>
-      <article class="card card--glass reveal" data-delay="70"><span class="card__num">02</span><h3 class="h-sm">Fewer wrong models</h3><p>Sector-standard data structures exist for good reasons. Knowing them prevents the elegant model that cannot answer the question the regulator asks.</p></article>
-      <article class="card card--glass reveal" data-delay="140"><span class="card__num">03</span><h3 class="h-sm">Realistic risk calls</h3><p>Knowing which constraints are genuinely immovable and which are habit is worth more than any technology choice on the project.</p></article>
+      <article class="card spot card--glass reveal"><span class="card__num">01</span><h3 class="h-sm">Faster discovery</h3><p>We already know what a remittance file, an eligibility feed or a bill of materials looks like. Discovery goes to the hard questions instead of the definitions.</p></article>
+      <article class="card spot card--glass reveal" data-delay="70"><span class="card__num">02</span><h3 class="h-sm">Fewer wrong models</h3><p>Sector-standard data structures exist for good reasons. Knowing them prevents the elegant model that cannot answer the question the regulator asks.</p></article>
+      <article class="card spot card--glass reveal" data-delay="140"><span class="card__num">03</span><h3 class="h-sm">Realistic risk calls</h3><p>Knowing which constraints are genuinely immovable and which are habit is worth more than any technology choice on the project.</p></article>
     </div>
   </div>
 </section>
 
 <!-- ============================ CTA ============================ -->
-<section class="cta">
-  <div class="cta__glow" aria-hidden="true"></div>
+<section class="cta has-bg">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap cta__in">
     <h2 class="h-xl">Does your sector look like one of these?</h2>
     <p class="lede">Tell us the systems you run and the problem you are trying to solve. We will tell you honestly whether we have done it before, or whether we would be learning on your budget.</p>
@@ -441,7 +469,9 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
 </button>
 
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
 <script src="assets/js/config.js"></script>
+<script src="assets/js/motion.js" defer></script>
 <script src="assets/js/site.js" defer></script>
 </body>
 </html>

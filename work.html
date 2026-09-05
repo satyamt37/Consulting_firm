@@ -29,6 +29,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 
@@ -62,6 +64,10 @@
 <body>
 
 <a class="skip" href="#main">Skip to content</a>
+
+<!-- scroll progress + film grain -->
+<div class="progress" aria-hidden="true"><div class="progress__bar"></div></div>
+<div class="grain" aria-hidden="true"></div>
 
 <!-- ====================== ANNOUNCEMENT ====================== -->
 <div class="announce">
@@ -190,6 +196,9 @@
 <main id="main">
 <!-- ============================ PAGE HERO ============================ -->
 <section class="phero">
+  <div class="photo-bg" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=70&auto=format&fit=crop" alt="" loading="eager" fetchpriority="high" decoding="async" width="1920" height="1080">
+  </div>
   <div class="hero__bg" aria-hidden="true">
     <div class="hero__grid"></div>
     <div class="hero__glow hero__glow--a"></div>
@@ -213,6 +222,9 @@
   <div class="wrap">
     <div class="split split--wide-l reveal">
       <div>
+        <div class="media media--wide media--lift" style="margin-bottom:26px">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=70&auto=format&fit=crop" alt="Data centre racks with dense fibre cabling" loading="lazy" decoding="async" width="1200" height="514">
+        </div>
         <div class="badge-row"><span class="badge">Case 01</span><span class="badge badge--soft">Snowflake</span><span class="badge badge--soft">dbt</span><span class="badge badge--soft">Healthcare</span></div>
         <h2 class="h-xl mt-16">Eleven years of claims history off Teradata</h2>
         <p class="lede mt-16">A regional US healthcare payer had two failed migration attempts behind them and a Teradata contract renewing in eight months. Analytics was the bottleneck on every initiative in the business.</p>
@@ -231,7 +243,7 @@
       </div>
 
       <div>
-        <div class="card card--feature card--pad-lg">
+        <div class="card spot card--feature card--pad-lg">
           <span class="card__num">Measured after go-live</span>
           <div class="stats" style="grid-template-columns:repeat(2,1fr)">
             <div class="stat"><b>-58%</b><span>platform run cost, year one</span></div>
@@ -256,7 +268,7 @@
   <div class="wrap">
     <div class="split split--wide-r split--flip reveal">
       <div>
-        <div class="card card--pad-lg">
+        <div class="card spot card--pad-lg">
           <span class="card__num">Measured after go-live</span>
           <div class="stats" style="grid-template-columns:repeat(2,1fr)">
             <div class="stat"><b>-41%</b><span>median first response time</span></div>
@@ -274,6 +286,9 @@
       </div>
 
       <div>
+        <div class="media media--wide media--violet media--lift" style="margin-bottom:26px">
+          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&q=70&auto=format&fit=crop" alt="Macro photograph of a circuit board" loading="lazy" decoding="async" width="1200" height="514">
+        </div>
         <div class="badge-row"><span class="badge">Case 02</span><span class="badge badge--soft">Salesforce</span><span class="badge badge--soft">Deft AI</span><span class="badge badge--soft">B2B SaaS</span></div>
         <h2 class="h-xl mt-16">Support triage that a compliance team approved</h2>
         <p class="lede mt-16">A B2B software company in Austin was drowning in tier-one cases. Two previous AI pilots had produced convincing demos and never reached production, because nobody could agree on whether they were good enough.</p>
@@ -299,6 +314,9 @@
   <div class="wrap">
     <div class="split split--wide-l reveal">
       <div>
+        <div class="media media--wide media--mint media--lift" style="margin-bottom:26px">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&q=70&auto=format&fit=crop" alt="Industrial welding throwing sparks" loading="lazy" decoding="async" width="1200" height="514">
+        </div>
         <div class="badge-row"><span class="badge">Case 03</span><span class="badge badge--soft">Oracle</span><span class="badge badge--soft">OCI</span><span class="badge badge--soft">Java</span><span class="badge badge--soft">Manufacturing</span></div>
         <h2 class="h-xl mt-16">A fragile EBS estate, stabilised and moved</h2>
         <p class="lede mt-16">A mid-market manufacturer was running E-Business Suite on ageing on-premise hardware. Month-end close took eleven days, and two of the three people who understood the customisations had retired.</p>
@@ -317,7 +335,7 @@
       </div>
 
       <div>
-        <div class="card card--feature card--pad-lg">
+        <div class="card spot card--feature card--pad-lg">
           <span class="card__num">Measured after go-live</span>
           <div class="stats" style="grid-template-columns:repeat(2,1fr)">
             <div class="stat"><b>-73%</b><span>month-end close time</span></div>
@@ -338,7 +356,8 @@
 </section>
 
 <!-- ============================ SHORTER ENGAGEMENTS ============================ -->
-<section class="section section--dark">
+<section class="section section--dark has-bg">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap">
     <div class="section__head reveal">
       <span class="eyebrow">Smaller engagements</span>
@@ -347,32 +366,32 @@
     </div>
 
     <div class="grid grid--3">
-      <article class="card card--glass reveal">
+      <article class="card spot card--glass reveal">
         <div class="badge-row"><span class="badge badge--mint">4 days</span></div>
         <h3 class="h-sm mt-16">Snowflake query that would not finish</h3>
         <p>A nightly aggregation had grown to nine hours and was about to miss the reporting window. Rewritten with a different clustering key and an incremental pattern — 14 minutes, and the credit spend dropped alongside it.</p>
       </article>
-      <article class="card card--glass reveal" data-delay="70">
+      <article class="card spot card--glass reveal" data-delay="70">
         <div class="badge-row"><span class="badge badge--mint">2 weeks</span></div>
         <h3 class="h-sm mt-16">Two systems that would not talk</h3>
         <p>A Salesforce to NetSuite integration built on Platform Events with idempotency and a replay path, replacing a nightly CSV that had failed silently for a month before anyone noticed.</p>
       </article>
-      <article class="card card--glass reveal" data-delay="140">
+      <article class="card spot card--glass reveal" data-delay="140">
         <div class="badge-row"><span class="badge badge--mint">3 weeks</span></div>
         <h3 class="h-sm mt-16">A site failing Core Web Vitals</h3>
         <p>A marketing site rebuilt on a static stack with proper image handling and schema. Largest Contentful Paint from 4.6s to 1.2s on a mid-range Android, and organic impressions up 34% over the following quarter.</p>
       </article>
-      <article class="card card--glass reveal">
+      <article class="card spot card--glass reveal">
         <div class="badge-row"><span class="badge badge--mint">6 weeks</span></div>
         <h3 class="h-sm mt-16">Contracts nobody had time to read</h3>
         <p>A document extraction pilot over 4,000 supplier agreements, pulling renewal dates, notice periods and liability caps with confidence routing. Uncertain cases went to a person; the rest went to a dashboard.</p>
       </article>
-      <article class="card card--glass reveal" data-delay="70">
+      <article class="card spot card--glass reveal" data-delay="70">
         <div class="badge-row"><span class="badge badge--mint">Ongoing</span></div>
         <h3 class="h-sm mt-16">A one-person data team, supported</h3>
         <p>A senior analyst moving into a Snowflake and dbt platform role, with two job-support sessions a week. After eleven weeks they were leading the workstream and the sessions stopped.</p>
       </article>
-      <article class="card card--glass reveal" data-delay="140">
+      <article class="card spot card--glass reveal" data-delay="140">
         <div class="badge-row"><span class="badge badge--mint">5 days</span></div>
         <h3 class="h-sm mt-16">An APEX app instead of a spreadsheet</h3>
         <p>A quality inspection process running on a shared workbook, rebuilt as an Oracle APEX application on the database the client already licensed. Deployed in a week, still running three years later.</p>
@@ -395,8 +414,8 @@
 </section>
 
 <!-- ============================ CTA ============================ -->
-<section class="cta">
-  <div class="cta__glow" aria-hidden="true"></div>
+<section class="cta has-bg">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap cta__in">
     <h2 class="h-xl">Recognise your situation in any of these?</h2>
     <p class="lede">Most of these engagements started as a thirty-minute call about something that had already been attempted once. Bring us the version of the problem you are embarrassed about.</p>
@@ -499,7 +518,9 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
 </button>
 
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
 <script src="assets/js/config.js"></script>
+<script src="assets/js/motion.js" defer></script>
 <script src="assets/js/site.js" defer></script>
 </body>
 </html>

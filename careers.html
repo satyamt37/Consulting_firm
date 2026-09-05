@@ -29,6 +29,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 
@@ -62,6 +64,10 @@
 <body>
 
 <a class="skip" href="#main">Skip to content</a>
+
+<!-- scroll progress + film grain -->
+<div class="progress" aria-hidden="true"><div class="progress__bar"></div></div>
+<div class="grain" aria-hidden="true"></div>
 
 <!-- ====================== ANNOUNCEMENT ====================== -->
 <div class="announce">
@@ -190,6 +196,9 @@
 <main id="main">
 <!-- ============================ PAGE HERO ============================ -->
 <section class="phero">
+  <div class="photo-bg" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=70&auto=format&fit=crop" alt="" loading="eager" fetchpriority="high" decoding="async" width="1920" height="1080">
+  </div>
   <div class="hero__bg" aria-hidden="true">
     <div class="hero__grid"></div>
     <div class="hero__glow hero__glow--a"></div>
@@ -216,32 +225,32 @@
       <h2 class="h-xl">The parts people ask about in the second interview</h2>
     </div>
     <div class="grid grid--3">
-      <article class="card reveal">
+      <article class="card spot reveal">
         <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
         <h3 class="h-sm">Paid honestly, reviewed twice a year</h3>
         <p>Bands are published internally. Reviews happen on a calendar, not when you threaten to leave. Offshore engineers are paid at the top of the local market because that is what retains people.</p>
       </article>
-      <article class="card reveal" data-delay="70">
+      <article class="card spot reveal" data-delay="70">
         <span class="card__ic card__ic--mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
         <h3 class="h-sm">No bench, no fake CVs</h3>
         <p>We do not submit anyone for a role they cannot do, and we do not pad experience. If a project ends, you go onto internal work or training on full pay while we place you properly.</p>
       </article>
-      <article class="card reveal" data-delay="140">
+      <article class="card spot reveal" data-delay="140">
         <span class="card__ic card__ic--violet" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
         <h3 class="h-sm">Certifications paid for</h3>
         <p>Salesforce, Snowflake, Oracle, AWS and Azure exams funded, first attempt and the retake. Study time is inside working hours, not something you do at 11pm.</p>
       </article>
-      <article class="card reveal">
+      <article class="card spot reveal">
         <span class="card__ic card__ic--amber" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></span>
         <h3 class="h-sm">Overlap, not night shifts</h3>
         <p>India teams work a 10am–8pm IST day with a fixed overlap window. Late calls happen occasionally, on a rota, with time back — not as a permanent expectation.</p>
       </article>
-      <article class="card reveal" data-delay="70">
+      <article class="card spot reveal" data-delay="70">
         <span class="card__ic card__ic--rose" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
         <h3 class="h-sm">Small teams, real ownership</h3>
         <p>Pods of three to eight people. You will talk to the client, see the whole system and be named on the design, at every level of seniority.</p>
       </article>
-      <article class="card reveal" data-delay="140">
+      <article class="card spot reveal" data-delay="140">
         <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></span>
         <h3 class="h-sm">Hybrid, genuinely</h3>
         <p>Two days a week in the delivery centre for team work, the rest wherever suits you. US roles are remote-first with occasional client travel.</p>
@@ -259,7 +268,7 @@
       <p class="lede mt-16">If none of these is quite you but the work looks right, send a general application below. We keep good profiles on file and come back to them.</p>
     </div>
 
-    <div class="card card--pad-lg reveal">
+    <div class="card spot card--pad-lg reveal">
       <div class="role">
         <div class="role__main">
           <h3>Salesforce Technical Architect</h3>
@@ -337,8 +346,21 @@
   </div>
 </section>
 
+<!-- image band -->
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="media media--wide media--frame media--lift">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1400&q=70&auto=format&fit=crop" alt="An open-plan engineering office with people at work" loading="lazy" decoding="async" width="1400" height="600">
+        <span class="media__cap"><b>Small teams, real ownership</b>Pods of three to eight. You will talk to the client and be named on the design, at every level.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================ PROCESS ============================ -->
-<section class="section section--dark">
+<section class="section section--dark has-bg">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap">
     <div class="split">
       <div class="reveal">
@@ -478,8 +500,8 @@
 </section>
 
 <!-- ============================ CTA ============================ -->
-<section class="cta">
-  <div class="cta__glow" aria-hidden="true"></div>
+<section class="cta has-bg">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap cta__in">
     <h2 class="h-xl">Not looking to move, but curious?</h2>
     <p class="lede">Plenty of our team started with a conversation eighteen months before they joined. Send a note and we will keep in touch properly, without a monthly recruiter email.</p>
@@ -582,7 +604,9 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
 </button>
 
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
 <script src="assets/js/config.js"></script>
+<script src="assets/js/motion.js" defer></script>
 <script src="assets/js/site.js" defer></script>
 </body>
 </html>

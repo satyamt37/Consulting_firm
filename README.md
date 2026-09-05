@@ -127,6 +127,46 @@ Deep links pre-select the engagement type, e.g.
 
 ---
 
+## Graphics and motion
+
+The site is built to feel like a premium consulting brand rather than a template.
+
+**Smooth scrolling** — [Lenis](https://github.com/darkroomengineering/lenis) (pinned to
+1.3.26, loaded from jsDelivr) gives the page inertial, weighted scrolling on desktop.
+Touch devices keep native momentum, which feels better on a phone. In-page anchor links
+glide through Lenis instead of jumping, and keyboard focus follows. If the CDN is ever
+blocked, the page silently falls back to normal scrolling — nothing breaks.
+
+**What moves as you scroll**
+- A gradient progress rail across the top of the window
+- Staggered reveals — elements fade and rise in sequence (`data-reveal="up|left|right|scale|blur"`)
+- Parallax on hero glow layers (`data-par="0.18"`)
+- Animated aurora meshes drifting behind every dark section
+- Counters that count up when their stat block enters view
+- The header gains a shadow once you leave the top of the page
+- Cards light up with a cursor-following spotlight and a gradient hairline
+
+Every one of these is disabled automatically under `prefers-reduced-motion: reduce`,
+including Lenis itself.
+
+**Layered backgrounds** — dark sections stack an animated aurora, a masked grid or dot
+texture, and a full-bleed darkened photograph. A fixed film-grain overlay sits above the
+whole page at 5% opacity to stop the large flat areas looking plasticky.
+
+**Photography** — images come from [Unsplash](https://unsplash.com) and are hotlinked
+from `images.unsplash.com` with width and quality parameters so only the needed size is
+downloaded. Every photo sits in a `.media` wrapper that applies a brand-coloured gradient
+tint, so the imagery reads as one set rather than stock. All below-the-fold images are
+`loading="lazy"` with explicit `width`/`height` to prevent layout shift, and if a photo
+ever fails to load the JS removes it so the branded gradient shows instead of a broken
+image icon.
+
+To use your own photography, replace the `https://images.unsplash.com/...` URLs — search
+the HTML for `images.unsplash.com`. Dropping files into `assets/img/` and pointing at
+those instead works exactly the same way and removes the third-party dependency.
+
+---
+
 ## Responsive behaviour
 
 Built mobile-first and checked from **320px to 2560px**.
@@ -150,12 +190,13 @@ Built mobile-first and checked from **320px to 2560px**.
 ├── assets/
 │   ├── css/style.css            the entire design system, one file
 │   ├── js/config.js             ← your EmailJS keys go here
-│   ├── js/site.js               nav, accordions, tabs, reveal, counters, forms
+│   ├── js/site.js               nav, accordions, tabs, counters, forms
+│   ├── js/motion.js             smooth scroll, progress, parallax, reveals, spotlight
 │   └── img/favicon.svg, og.svg  brand mark and social share card
 ├── robots.txt · sitemap.xml · .nojekyll
 ```
 
-No build step, no npm install, no framework. Open any `.html` file and it works.
+One external script (Lenis, for smooth scrolling) and Google Fonts. No build step, no npm install, no framework. Open any `.html` file and it works.
 To preview locally: `python -m http.server 8000` then visit http://localhost:8000.
 
 ---

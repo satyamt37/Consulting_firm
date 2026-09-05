@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#050A16">
 <meta name="author" content="Stratiq Cloud">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://satyamt37.github.io/Consulting_firm/">
+<link rel="canonical" href="https://satyamt37.github.io/Consulting_firm/index.html">
 
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/favicon.svg">
@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="Stratiq Cloud">
 <meta property="og:title" content="Stratiq Cloud - Salesforce, Snowflake, Oracle and AI consulting">
 <meta property="og:description" content="Stratiq Cloud is an IT consulting firm headquartered in Texas with delivery centres in Hyderabad, Pune and Bengaluru. Salesforce, Snowflake, Oracle, AI, Java, Python, PHP, React and SEO - as projects, pods, staff augmentation, job support or freelance work.">
-<meta property="og:url" content="https://satyamt37.github.io/Consulting_firm/">
+<meta property="og:url" content="https://satyamt37.github.io/Consulting_firm/index.html">
 <meta property="og:image" content="https://satyamt37.github.io/Consulting_firm/assets/img/og.svg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -29,6 +29,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 
@@ -62,6 +64,10 @@
 <body>
 
 <a class="skip" href="#main">Skip to content</a>
+
+<!-- scroll progress + film grain -->
+<div class="progress" aria-hidden="true"><div class="progress__bar"></div></div>
+<div class="grain" aria-hidden="true"></div>
 
 <!-- ====================== ANNOUNCEMENT ====================== -->
 <div class="announce">
@@ -190,26 +196,30 @@
 <main id="main">
 <!-- ============================ HERO ============================ -->
 <section class="hero">
+  <div class="hero__photo" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=1920&q=70&auto=format&fit=crop"
+         alt="" loading="eager" fetchpriority="high" decoding="async" width="1920" height="1080">
+  </div>
   <div class="hero__bg" aria-hidden="true">
     <div class="hero__grid"></div>
-    <div class="hero__glow hero__glow--a"></div>
-    <div class="hero__glow hero__glow--b"></div>
-    <div class="hero__glow hero__glow--c"></div>
+    <div class="hero__glow hero__glow--a par" data-par="0.18"></div>
+    <div class="hero__glow hero__glow--b par" data-par="-0.14"></div>
+    <div class="hero__glow hero__glow--c par" data-par="0.1"></div>
   </div>
 
   <div class="wrap hero__in">
     <div class="hero__cols">
       <div>
-        <span class="hero__badge">
+        <span class="hero__badge" data-reveal="up">
           <span class="chip-mini">New</span>
           <span><b>Deft AI</b> — our agentic AI accelerator for Salesforce &amp; Snowflake</span>
         </span>
 
-        <h1 class="h-xxl">Salesforce, Snowflake and Oracle work — <span class="grad">delivered, not just advised.</span></h1>
+        <h1 class="h-xxl" data-reveal="up">Salesforce, Snowflake and Oracle work — <span class="grad">delivered, not just advised.</span></h1>
 
-        <p class="hero__lede">Stratiq Cloud is an IT consulting firm headquartered in Texas with delivery centres in Hyderabad, Pune and Bengaluru. We take on full projects, drop in dedicated pods, augment your team, support you on the job, and pick up freelance work — on rates that flex with the scope.</p>
+        <p class="hero__lede" data-reveal="up">Stratiq Cloud is an IT consulting firm headquartered in Texas with delivery centres in Hyderabad, Pune and Bengaluru. We take on full projects, drop in dedicated pods, augment your team, support you on the job, and pick up freelance work — on rates that flex with the scope.</p>
 
-        <div class="btn-row hero__cta">
+        <div class="btn-row hero__cta" data-reveal="up">
           <a class="btn btn--primary" href="contact.html">
             Book a free 30-min consult
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -217,11 +227,11 @@
           <a class="btn btn--ghost-inv" href="services.html">Explore capabilities</a>
         </div>
 
-        <p class="hero__note">No obligation &middot; NDA on request &middot; Reply within one business day</p>
+        <p class="hero__note" data-reveal="up">No obligation &middot; NDA on request &middot; Reply within one business day</p>
       </div>
 
       <!-- engagement console -->
-      <div class="console" aria-label="How teams engage Stratiq Cloud">
+      <div class="console par" data-par="-0.06" data-reveal="scale" aria-label="How teams engage Stratiq Cloud">
         <div class="console__bar">
           <span class="console__dot"></span><span class="console__dot"></span><span class="console__dot"></span>
           <span class="console__ttl">stratiq · engagement models</span>
@@ -229,42 +239,27 @@
         <div class="console__body">
           <div class="crow">
             <span class="crow__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v13H3z"/><path d="M8 21h8M12 16v5"/></svg></span>
-            <span class="crow__main">
-              <span class="crow__t">Fixed-scope project</span>
-              <span class="crow__d">milestone billing</span>
-            </span>
+            <span class="crow__main"><span class="crow__t">Fixed-scope project</span><span class="crow__d">milestone billing</span></span>
             <span class="crow__v">from 4 weeks</span>
           </div>
           <div class="crow">
             <span class="crow__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
-            <span class="crow__main">
-              <span class="crow__t">Dedicated pod</span>
-              <span class="crow__d">3–8 engineers + lead</span>
-            </span>
+            <span class="crow__main"><span class="crow__t">Dedicated pod</span><span class="crow__d">3–8 engineers + lead</span></span>
             <span class="crow__v">monthly</span>
           </div>
           <div class="crow">
             <span class="crow__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></span>
-            <span class="crow__main">
-              <span class="crow__t">Staff augmentation</span>
-              <span class="crow__d">your tools, your sprints</span>
-            </span>
+            <span class="crow__main"><span class="crow__t">Staff augmentation</span><span class="crow__d">your tools, your sprints</span></span>
             <span class="crow__v">hourly / daily</span>
           </div>
           <div class="crow">
             <span class="crow__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>
-            <span class="crow__main">
-              <span class="crow__t">Job support</span>
-              <span class="crow__d">evenings &amp; weekends, IST/CST</span>
-            </span>
+            <span class="crow__main"><span class="crow__t">Job support</span><span class="crow__d">evenings &amp; weekends, IST/CST</span></span>
             <span class="crow__v">per session</span>
           </div>
           <div class="crow">
             <span class="crow__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
-            <span class="crow__main">
-              <span class="crow__t">Freelance task</span>
-              <span class="crow__d">one build, one bug, one migration</span>
-            </span>
+            <span class="crow__main"><span class="crow__t">Freelance task</span><span class="crow__d">one build, one bug, one migration</span></span>
             <span class="crow__v">flexible</span>
           </div>
         </div>
@@ -272,16 +267,16 @@
     </div>
 
     <div class="hero__strip">
-      <div class="hero__stat"><b><span data-count="120" data-suffix="+">120+</span></b><span>Cloud &amp; data engagements delivered</span></div>
-      <div class="hero__stat"><b><span data-count="9" data-suffix=" domains">9 domains</span></b><span>Salesforce to SEO, under one contract</span></div>
-      <div class="hero__stat"><b><span data-count="4" data-suffix=" offices">4 offices</span></b><span>Texas HQ plus three India centres</span></div>
-      <div class="hero__stat"><b><span data-count="16" data-suffix="h">16h</span></b><span>Overlap across US and IST working days</span></div>
+      <div class="hero__stat" data-reveal="up"><b class="grad-num"><span data-count="120" data-suffix="+">120+</span></b><span>Cloud &amp; data engagements delivered</span></div>
+      <div class="hero__stat" data-reveal="up"><b class="grad-num"><span data-count="9" data-suffix=" domains">9 domains</span></b><span>Salesforce to SEO, under one contract</span></div>
+      <div class="hero__stat" data-reveal="up"><b class="grad-num"><span data-count="4" data-suffix=" offices">4 offices</span></b><span>Texas HQ plus three India centres</span></div>
+      <div class="hero__stat" data-reveal="up"><b class="grad-num"><span data-count="20" data-suffix="h">20h</span></b><span>Combined US and India coverage each day</span></div>
     </div>
   </div>
 </section>
 
 <!-- ============================ MARQUEE ============================ -->
-<section class="section--ink2" style="padding-block:10px;border-top:1px solid rgba(255,255,255,.08)">
+<section class="section--ink2" style="padding-block:12px;border-top:1px solid rgba(255,255,255,.08)">
   <div class="marquee">
     <div class="marquee__track">
       <span class="marquee__item"><i></i>Salesforce</span>
@@ -299,7 +294,6 @@
       <span class="marquee__item"><i></i>AWS</span>
       <span class="marquee__item"><i></i>Azure</span>
       <span class="marquee__item"><i></i>Technical SEO</span>
-      <!-- duplicate set keeps the loop seamless -->
       <span class="marquee__item" aria-hidden="true"><i></i>Salesforce</span>
       <span class="marquee__item" aria-hidden="true"><i></i>Snowflake</span>
       <span class="marquee__item" aria-hidden="true"><i></i>Oracle Fusion</span>
@@ -319,34 +313,43 @@
   </div>
 </section>
 
-<!-- ============================ CAPABILITIES ============================ -->
-<section class="section" id="capabilities">
+<!-- ============================ CAPABILITIES (BENTO) ============================ -->
+<section class="section has-bg" id="capabilities">
+  <div class="tex-grid tex-grid--light" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="section__head reveal">
+    <div class="section__head" data-reveal="up">
       <span class="eyebrow">What we do</span>
       <h2 class="h-xl">Nine capabilities. One accountable delivery team.</h2>
       <p class="lede mt-16">Most firms make you choose between a platform specialist and a full-stack shop. We run both under a single contract — so the Snowflake model, the Salesforce object, the Java service and the page that ranks for it are built by people who talk to each other daily.</p>
     </div>
 
-    <div class="grid grid--3">
+    <div class="bento">
 
-      <article class="card reveal">
+      <!-- big tile with photo -->
+      <article class="card card--media card--glow bento__a" data-reveal="up">
+        <div class="media media--wide">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1100&q=70&auto=format&fit=crop"
+               alt="Rows of illuminated data-centre racks" loading="lazy" decoding="async" width="1100" height="619">
+          <span class="media__badge">Cloud data platform</span>
+        </div>
+        <div class="card__body">
+          <h3 class="h-md">Snowflake, end to end</h3>
+          <p>Migrations off Teradata, Oracle and on-prem SQL. dbt modelling with tests and contracts. Snowpark pipelines, Cortex AI functions, and warehouse spend you can actually explain to finance.</p>
+          <div class="tags"><span class="tag">Migrations</span><span class="tag">dbt</span><span class="tag">Snowpark</span><span class="tag">Cortex AI</span><span class="tag">Cost control</span></div>
+          <a class="link" href="services.html#snowflake">Snowflake services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+      <article class="card card--glow spot bento__b" data-reveal="up">
         <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></span>
         <h3 class="h-sm">Salesforce</h3>
         <p>Sales, Service and Experience Cloud builds, Data Cloud unification, Agentforce, CPQ, Flow automation, and the integrations that keep it honest.</p>
+        <ul class="ticks"><li>Org health checks and technical debt remediation</li><li>Data Cloud identity resolution</li><li>Managed admin after go-live</li></ul>
         <div class="tags"><span class="tag">Apex &amp; LWC</span><span class="tag">Data Cloud</span><span class="tag">Agentforce</span></div>
         <a class="link" href="services.html#salesforce">Salesforce services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </article>
 
-      <article class="card reveal" data-delay="70">
-        <span class="card__ic card__ic--mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="4" y1="7" x2="20" y2="17"/><line x1="4" y1="17" x2="20" y2="7"/></svg></span>
-        <h3 class="h-sm">Snowflake</h3>
-        <p>Warehouse migrations off Teradata, Oracle and on-prem SQL, dbt modelling, Snowpark pipelines, Cortex AI functions, and warehouse spend you can actually explain.</p>
-        <div class="tags"><span class="tag">Migrations</span><span class="tag">dbt</span><span class="tag">Cortex AI</span></div>
-        <a class="link" href="services.html#snowflake">Snowflake services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </article>
-
-      <article class="card reveal" data-delay="140">
+      <article class="card card--glow spot bento__c" data-reveal="up">
         <span class="card__ic card__ic--rose" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span>
         <h3 class="h-sm">Oracle</h3>
         <p>Fusion Cloud ERP and HCM rollouts, EBS support and upgrades, OCI landing zones, APEX apps, and PL/SQL that gets refactored instead of feared.</p>
@@ -354,15 +357,7 @@
         <a class="link" href="services.html#oracle">Oracle services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </article>
 
-      <article class="card reveal">
-        <span class="card__ic card__ic--violet" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></span>
-        <h3 class="h-sm">Deft AI &amp; GenAI</h3>
-        <p>Our AI practice: retrieval assistants over your own data, agentic workflows, document extraction, forecasting, evaluation harnesses and LLMOps that survive audit.</p>
-        <div class="tags"><span class="tag">RAG</span><span class="tag">Agents</span><span class="tag">LLMOps</span></div>
-        <a class="link" href="ai-solutions.html">AI solutions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </article>
-
-      <article class="card reveal" data-delay="70">
+      <article class="card card--glow spot bento__d" data-reveal="up">
         <span class="card__ic card__ic--amber" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
         <h3 class="h-sm">Application engineering</h3>
         <p>Java and Spring Boot services, Python APIs and automation, PHP and Laravel platforms, React front-ends, and the API layer that ties a decade of systems together.</p>
@@ -370,28 +365,83 @@
         <a class="link" href="services.html#engineering">Engineering services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </article>
 
-      <article class="card reveal" data-delay="140">
+      <article class="card card--glow spot bento__e" data-reveal="up">
         <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
         <h3 class="h-sm">Web &amp; SEO</h3>
-        <p>Marketing sites and portals that load fast on a mid-range Android, plus technical SEO, schema, Core Web Vitals and content structure built for AI answer engines.</p>
+        <p>Sites and portals that load fast on a mid-range Android, plus technical SEO, schema and Core Web Vitals built for AI answer engines as well as Google.</p>
         <div class="tags"><span class="tag">Core Web Vitals</span><span class="tag">Schema</span><span class="tag">GEO/AEO</span></div>
         <a class="link" href="services.html#seo">Web and SEO <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </article>
 
+      <!-- wide AI tile with photo -->
+      <article class="card card--media card--glow bento__a" data-reveal="up">
+        <div class="media media--wide media--violet">
+          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1100&q=70&auto=format&fit=crop"
+               alt="Close-up of a circuit board lit in teal" loading="lazy" decoding="async" width="1100" height="619">
+          <span class="media__badge">Deft AI</span>
+        </div>
+        <div class="card__body">
+          <h3 class="h-md">AI that clears the pilot stage</h3>
+          <p>Retrieval assistants grounded in your own data, agentic workflows with approval gates, document extraction, forecasting, and the evaluation harnesses that let a compliance team say yes.</p>
+          <div class="tags"><span class="tag">RAG</span><span class="tag">Agents</span><span class="tag">Evals</span><span class="tag">LLMOps</span><span class="tag">Guardrails</span></div>
+          <a class="link" href="ai-solutions.html">Explore Deft AI <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+      <article class="card card--glow spot bento__b" data-reveal="up">
+        <span class="card__ic card__ic--mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 3.5-4 3 2.5L20 7"/></svg></span>
+        <h3 class="h-sm">Data engineering</h3>
+        <p>Batch and streaming pipelines, CDC, Airflow orchestration, semantic layers, and governance that survives an audit.</p>
+        <ul class="ticks"><li>Batch and streaming ingestion with CDC</li><li>Semantic layers so a metric means one thing</li><li>Catalogues, lineage and quality tests</li></ul>
+        <div class="tags"><span class="tag">Airflow</span><span class="tag">Power BI</span><span class="tag">Lineage</span></div>
+        <a class="link" href="services.html#data">Data services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <article class="card card--glow spot bento__half" data-reveal="up">
+        <span class="card__ic card__ic--violet" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/><path d="m9 13 2 2 4-4"/></svg></span>
+        <h3 class="h-sm">Cloud &amp; DevOps</h3>
+        <p>Landing zones on AWS, Azure and OCI. Terraform, CI/CD with real gates, observability and FinOps that makes spend explainable.</p>
+        <div class="tags"><span class="tag">Terraform</span><span class="tag">CI/CD</span><span class="tag">FinOps</span></div>
+        <a class="link" href="services.html#cloud">Cloud services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <article class="card card--glow spot bento__half" data-reveal="up">
+        <span class="card__ic card__ic--rose" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><path d="M21 12a9 9 0 1 1-6.2-8.6"/></svg></span>
+        <h3 class="h-sm">QA, testing &amp; support</h3>
+        <p>Automation frameworks in CI, Salesforce and Oracle regression packs for seasonal releases, performance testing, and L2/L3 application support on an agreed SLA.</p>
+        <div class="tags"><span class="tag">Playwright</span><span class="tag">Selenium</span><span class="tag">k6</span><span class="tag">SLA support</span></div>
+        <a class="link" href="services.html#quality">QA and support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+    </div>
+
+    <div class="chips mt-48" data-reveal="up">
+      <span class="chip chip--sf"><i></i>Salesforce</span>
+      <span class="chip chip--snow"><i></i>Snowflake</span>
+      <span class="chip chip--ora"><i></i>Oracle</span>
+      <span class="chip chip--ai"><i></i>Deft AI</span>
+      <span class="chip chip--java"><i></i>Java</span>
+      <span class="chip chip--py"><i></i>Python</span>
+      <span class="chip chip--php"><i></i>PHP</span>
+      <span class="chip chip--react"><i></i>React</span>
+      <span class="chip chip--aws"><i></i>AWS</span>
+      <span class="chip chip--az"><i></i>Azure</span>
+      <span class="chip chip--seo"><i></i>SEO</span>
     </div>
   </div>
 </section>
 
 <!-- ============================ PLATFORM TABS ============================ -->
-<section class="section section--soft" id="platforms">
+<section class="section section--soft has-bg" id="platforms">
+  <div class="tex-dots tex-dots--light" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="section__head reveal">
+    <div class="section__head" data-reveal="up">
       <span class="eyebrow">Cloud practice</span>
       <h2 class="h-xl">Three platforms we go deep on</h2>
       <p class="lede mt-16">Everything else we do plugs into these. Pick a platform to see the work we are typically brought in for.</p>
     </div>
 
-    <div class="tabs reveal">
+    <div class="tabs" data-reveal="up">
       <div class="tabs__nav" role="tablist" aria-label="Cloud platforms">
         <button class="tabs__btn" type="button" role="tab" id="tab-sf" aria-controls="panel-sf" aria-selected="true">Salesforce</button>
         <button class="tabs__btn" type="button" role="tab" id="tab-sn" aria-controls="panel-sn" aria-selected="false">Snowflake</button>
@@ -418,10 +468,10 @@
             </div>
           </div>
           <div class="grid grid--2">
-            <div class="card card--flat"><span class="card__num">01</span><h4 class="h-sm">Implementation</h4><p>Greenfield builds and phased rollouts across business units.</p></div>
-            <div class="card card--flat"><span class="card__num">02</span><h4 class="h-sm">Rescue</h4><p>Stalled or over-customised orgs brought back to a supportable state.</p></div>
-            <div class="card card--flat"><span class="card__num">03</span><h4 class="h-sm">Data Cloud</h4><p>One customer profile stitched from CRM, ERP and product data.</p></div>
-            <div class="card card--flat"><span class="card__num">04</span><h4 class="h-sm">Managed</h4><p>Ongoing admin, releases and enhancement backlog burn-down.</p></div>
+            <div class="card card--flat spot"><span class="card__num">01</span><h4 class="h-sm">Implementation</h4><p>Greenfield builds and phased rollouts across business units.</p></div>
+            <div class="card card--flat spot"><span class="card__num">02</span><h4 class="h-sm">Rescue</h4><p>Stalled or over-customised orgs brought back to a supportable state.</p></div>
+            <div class="card card--flat spot"><span class="card__num">03</span><h4 class="h-sm">Data Cloud</h4><p>One customer profile stitched from CRM, ERP and product data.</p></div>
+            <div class="card card--flat spot"><span class="card__num">04</span><h4 class="h-sm">Managed</h4><p>Ongoing admin, releases and enhancement backlog burn-down.</p></div>
           </div>
         </div>
       </div>
@@ -445,10 +495,10 @@
             </div>
           </div>
           <div class="grid grid--2">
-            <div class="card card--flat"><span class="card__num">01</span><h4 class="h-sm">Migrate</h4><p>Assessment, code conversion, parallel run and cutover.</p></div>
-            <div class="card card--flat"><span class="card__num">02</span><h4 class="h-sm">Model</h4><p>dbt layers, contracts and tests so numbers stop disagreeing.</p></div>
-            <div class="card card--flat"><span class="card__num">03</span><h4 class="h-sm">Govern</h4><p>Access, masking, lineage and audit that pass review.</p></div>
-            <div class="card card--flat"><span class="card__num">04</span><h4 class="h-sm">Optimise</h4><p>Credit burn cut without slowing the teams that depend on it.</p></div>
+            <div class="card card--flat spot"><span class="card__num">01</span><h4 class="h-sm">Migrate</h4><p>Assessment, code conversion, parallel run and cutover.</p></div>
+            <div class="card card--flat spot"><span class="card__num">02</span><h4 class="h-sm">Model</h4><p>dbt layers, contracts and tests so numbers stop disagreeing.</p></div>
+            <div class="card card--flat spot"><span class="card__num">03</span><h4 class="h-sm">Govern</h4><p>Access, masking, lineage and audit that pass review.</p></div>
+            <div class="card card--flat spot"><span class="card__num">04</span><h4 class="h-sm">Optimise</h4><p>Credit burn cut without slowing the teams that depend on it.</p></div>
           </div>
         </div>
       </div>
@@ -472,10 +522,10 @@
             </div>
           </div>
           <div class="grid grid--2">
-            <div class="card card--flat"><span class="card__num">01</span><h4 class="h-sm">Fusion</h4><p>Cloud ERP and HCM rollouts with change management built in.</p></div>
-            <div class="card card--flat"><span class="card__num">02</span><h4 class="h-sm">EBS</h4><p>Upgrades, extensions and day-two application support.</p></div>
-            <div class="card card--flat"><span class="card__num">03</span><h4 class="h-sm">OCI</h4><p>Landing zones, networking, DR and cost governance.</p></div>
-            <div class="card card--flat"><span class="card__num">04</span><h4 class="h-sm">APEX</h4><p>Fast internal apps on the database you already license.</p></div>
+            <div class="card card--flat spot"><span class="card__num">01</span><h4 class="h-sm">Fusion</h4><p>Cloud ERP and HCM rollouts with change management built in.</p></div>
+            <div class="card card--flat spot"><span class="card__num">02</span><h4 class="h-sm">EBS</h4><p>Upgrades, extensions and day-two application support.</p></div>
+            <div class="card card--flat spot"><span class="card__num">03</span><h4 class="h-sm">OCI</h4><p>Landing zones, networking, DR and cost governance.</p></div>
+            <div class="card card--flat spot"><span class="card__num">04</span><h4 class="h-sm">APEX</h4><p>Fast internal apps on the database you already license.</p></div>
           </div>
         </div>
       </div>
@@ -499,10 +549,10 @@
             </div>
           </div>
           <div class="grid grid--2">
-            <div class="card card--flat"><span class="card__num">01</span><h4 class="h-sm">Discover</h4><p>Two weeks to a shortlist of use cases with measurable value.</p></div>
-            <div class="card card--flat"><span class="card__num">02</span><h4 class="h-sm">Pilot</h4><p>One use case, real data, an eval set and a go/no-go number.</p></div>
-            <div class="card card--flat"><span class="card__num">03</span><h4 class="h-sm">Harden</h4><p>Guardrails, monitoring, fallbacks and human review paths.</p></div>
-            <div class="card card--flat"><span class="card__num">04</span><h4 class="h-sm">Scale</h4><p>Second and third use cases on the same platform, faster.</p></div>
+            <div class="card card--flat spot"><span class="card__num">01</span><h4 class="h-sm">Discover</h4><p>Two weeks to a shortlist of use cases with measurable value.</p></div>
+            <div class="card card--flat spot"><span class="card__num">02</span><h4 class="h-sm">Pilot</h4><p>One use case, real data, an eval set and a go/no-go number.</p></div>
+            <div class="card card--flat spot"><span class="card__num">03</span><h4 class="h-sm">Harden</h4><p>Guardrails, monitoring, fallbacks and human review paths.</p></div>
+            <div class="card card--flat spot"><span class="card__num">04</span><h4 class="h-sm">Scale</h4><p>Second and third use cases on the same platform, faster.</p></div>
           </div>
         </div>
       </div>
@@ -512,10 +562,12 @@
 </section>
 
 <!-- ============================ DEFT AI BAND ============================ -->
-<section class="section section--dark" id="deft-ai">
+<section class="section section--dark has-bg" id="deft-ai">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="tex-grid" aria-hidden="true"></div>
   <div class="wrap">
     <div class="split split--wide-r">
-      <div class="reveal">
+      <div data-reveal="left">
         <span class="eyebrow">Deft AI</span>
         <h2 class="h-xl">AI that clears the pilot stage</h2>
         <p class="lede mt-16">Most enterprise AI dies between the demo and production — not because the model is weak, but because nobody built the evaluation, the guardrails or the cost model. Deft AI is our answer to that: an accelerator plus a delivery method that assumes your data is messy, your auditors are real, and someone has to own it on Monday.</p>
@@ -527,22 +579,22 @@
         </div>
         <div class="btn-row mt-32">
           <a class="btn btn--light" href="ai-solutions.html">See how Deft AI works</a>
-          <a class="btn btn--ghost-inv" href="contact.html">Book an AI discovery</a>
+          <a class="btn btn--ghost-inv" href="contact.html?intent=ai">Book an AI discovery</a>
         </div>
       </div>
 
-      <div class="grid reveal" data-delay="90">
-        <article class="card card--glass">
+      <div class="grid" data-reveal="right">
+        <article class="card card--glass spot">
           <span class="card__num">Accelerator</span>
           <h3 class="h-sm">Grounded assistant kit</h3>
           <p>Connectors for Snowflake, Salesforce, SharePoint and S3, a retrieval layer with citations, and an eval harness pre-wired — so a pilot starts in week one, not week six.</p>
         </article>
-        <article class="card card--glass">
+        <article class="card card--glass spot">
           <span class="card__num">Accelerator</span>
           <h3 class="h-sm">Agent workflow runtime</h3>
           <p>Tool-calling agents with approval gates, full step traces, retries and spend caps. Built for processes where a wrong action costs money.</p>
         </article>
-        <article class="card card--glass">
+        <article class="card card--glass spot">
           <span class="card__num">Accelerator</span>
           <h3 class="h-sm">Document intelligence</h3>
           <p>Invoices, claims, contracts and statements to structured records, with confidence scores that route the uncertain cases to a person.</p>
@@ -553,16 +605,17 @@
 </section>
 
 <!-- ============================ ENGAGEMENT MODELS ============================ -->
-<section class="section" id="engage">
+<section class="section has-bg" id="engage">
+  <div class="tex-grid tex-grid--light" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="section__head reveal">
+    <div class="section__head" data-reveal="up">
       <span class="eyebrow">How you can work with us</span>
       <h2 class="h-xl">Five ways in — including the two most firms will not offer</h2>
       <p class="lede mt-16">Not every problem is a six-month statement of work. Sometimes you need one engineer for three weeks, help getting through your first month in a new role, or a single migration done properly over a weekend. We do all of it, and we price it honestly.</p>
     </div>
 
     <div class="grid grid--3">
-      <article class="card reveal">
+      <article class="card card--glow spot" data-reveal="up">
         <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v13H3z"/><path d="M8 21h8M12 16v5"/></svg></span>
         <h3 class="h-sm">Fixed-scope projects</h3>
         <p>A defined outcome, a fixed price and milestone billing. Best when the requirements are stable and you want the delivery risk on our side.</p>
@@ -570,7 +623,7 @@
         <a class="link" href="engagement.html#projects">How projects run <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </article>
 
-      <article class="card reveal" data-delay="70">
+      <article class="card card--glow spot" data-reveal="up">
         <span class="card__ic card__ic--mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
         <h3 class="h-sm">Dedicated pods</h3>
         <p>A standing team — three to eight engineers with a tech lead — working your backlog on a monthly rate. Scale up or down with 30 days' notice.</p>
@@ -578,7 +631,7 @@
         <a class="link" href="engagement.html#pods">How pods work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </article>
 
-      <article class="card reveal" data-delay="140">
+      <article class="card card--glow spot" data-reveal="up">
         <span class="card__ic card__ic--violet" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></span>
         <h3 class="h-sm">Staff augmentation</h3>
         <p>Specific skills into your existing team, reporting to your leads. Salesforce, Snowflake, Oracle, Java, Python, React — contract or contract-to-hire.</p>
@@ -586,7 +639,7 @@
         <a class="link" href="engagement.html#staffing">Augment a team <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </article>
 
-      <article class="card card--feature reveal">
+      <article class="card card--feature spot" data-reveal="up">
         <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>
         <h3 class="h-sm">Job support</h3>
         <p>Working professionals who need a senior pair of eyes on the job — a tricky ticket, an unfamiliar stack, a first month in a new role. Sessions in your evening, IST or CST.</p>
@@ -594,7 +647,7 @@
         <a class="link" href="engagement.html#job-support">Job support plans <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </article>
 
-      <article class="card card--feature reveal" data-delay="70">
+      <article class="card card--feature spot" data-reveal="up">
         <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
         <h3 class="h-sm">Freelance projects</h3>
         <p>Small, sharp pieces of work — one integration, one dashboard, one migration script, one landing page that has to rank. Fixed quote, fast turnaround, no minimum contract.</p>
@@ -602,7 +655,7 @@
         <a class="link" href="engagement.html#freelance">Send a freelance brief <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </article>
 
-      <article class="card reveal" data-delay="140">
+      <article class="card card--glow spot" data-reveal="up">
         <span class="card__ic card__ic--amber" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
         <h3 class="h-sm">Flexible rates</h3>
         <p>Onshore, offshore and blended rate cards. Rates move with duration, seniority mix and where the work is done — and we show you the maths before you sign anything.</p>
@@ -617,33 +670,44 @@
 <section class="section section--soft">
   <div class="wrap">
     <div class="split split--sticky">
-      <div class="reveal">
+      <div data-reveal="left">
         <span class="eyebrow">Why teams pick us</span>
         <h2 class="h-xl">Big-firm discipline. Small-firm answer times.</h2>
         <p class="lede mt-16">We built Stratiq for the middle ground that the market keeps missing — companies that need genuine platform depth but cannot absorb a global systems integrator's overhead or its six-week response cycle.</p>
+
+        <div class="media media--3-2 media--lift mt-32">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1000&q=70&auto=format&fit=crop"
+               alt="A consulting team working through a plan on a whiteboard" loading="lazy" decoding="async" width="1000" height="667">
+          <span class="media__cap"><b>One team, one standard</b>Architecture in Texas, engineering depth in India — same code review, same definition of done.</span>
+        </div>
+
         <div class="btn-row mt-32">
           <a class="btn btn--dark" href="about.html">About Stratiq</a>
           <a class="btn btn--ghost" href="work.html">See our work</a>
         </div>
       </div>
 
-      <div>
-        <div class="steps reveal">
-          <div class="step">
+      <div data-reveal="right">
+        <div class="rail">
+          <div class="rail__item">
+            <span class="rail__k">Accountability</span>
             <h3 class="h-sm">A named senior on every engagement</h3>
-            <p>The architect who scoped your work stays on it. No bait-and-switch between the pitch and the people who show up.</p>
+            <p class="muted mt-8">The architect who scoped your work stays on it. No bait-and-switch between the pitch and the people who show up.</p>
           </div>
-          <div class="step">
-            <h3 class="h-sm">Two-timezone delivery, one standup</h3>
-            <p>Texas and India overlap by design. Work handed off at 6pm CST is progressed overnight and reviewed at your 9am.</p>
+          <div class="rail__item">
+            <span class="rail__k">Timezones</span>
+            <h3 class="h-sm">Two geographies, one standup</h3>
+            <p class="muted mt-8">Texas and India overlap by design. Work handed off at 6pm CST is progressed overnight and reviewed at your 9am.</p>
           </div>
-          <div class="step">
+          <div class="rail__item">
+            <span class="rail__k">Handover</span>
             <h3 class="h-sm">Everything documented as we go</h3>
-            <p>Runbooks, decision records and handover notes are deliverables, not an afterthought. You can fire us and still run the system.</p>
+            <p class="muted mt-8">Runbooks, decision records and handover notes are deliverables, not an afterthought. You can end the engagement and still run the system.</p>
           </div>
-          <div class="step">
+          <div class="rail__item">
+            <span class="rail__k">Commercials</span>
             <h3 class="h-sm">Priced so you can start small</h3>
-            <p>Most clients begin with a two-week assessment or a single pilot. If it works, we scale. If it does not, you have lost two weeks, not two quarters.</p>
+            <p class="muted mt-8">Most clients begin with a two-week assessment or a single pilot. If it works, we scale. If it does not, you have lost two weeks, not two quarters.</p>
           </div>
         </div>
       </div>
@@ -652,21 +716,22 @@
 </section>
 
 <!-- ============================ PROCESS ============================ -->
-<section class="section section--ink2">
+<section class="section section--ink2 has-bg">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap">
-    <div class="section__head center reveal">
+    <div class="section__head center" data-reveal="up">
       <span class="eyebrow">Delivery method</span>
       <h2 class="h-xl">From first call to steady state</h2>
       <p class="lede mt-16">The same five stages whether it is a Snowflake migration, an Agentforce rollout or a single freelance build. Only the duration changes.</p>
     </div>
 
-    <div class="grid grid--3 reveal">
-      <article class="card card--glass"><span class="card__num">Stage 01</span><h3 class="h-sm">Discovery call</h3><p>30 minutes, no charge. We map the problem, the systems involved and what "done" looks like to you. You leave with an opinion, whether or not you hire us.</p></article>
-      <article class="card card--glass"><span class="card__num">Stage 02</span><h3 class="h-sm">Assessment</h3><p>One to two weeks. Current-state review, risk register, target architecture and a costed plan with options — not a single take-it-or-leave-it number.</p></article>
-      <article class="card card--glass"><span class="card__num">Stage 03</span><h3 class="h-sm">Build</h3><p>Two-week sprints, a demo at the end of each, and a shared board you can open any time. Changes are priced as they arise, not bundled into a surprise.</p></article>
-      <article class="card card--glass"><span class="card__num">Stage 04</span><h3 class="h-sm">Cutover</h3><p>Parallel runs, reconciliation, rollback plan, hypercare. We do not consider a migration finished until the old system has been dark for a full cycle.</p></article>
-      <article class="card card--glass"><span class="card__num">Stage 05</span><h3 class="h-sm">Run or hand over</h3><p>Managed support on an SLA, or a structured handover to your team with training and runbooks. Your call, made at the start, not the end.</p></article>
-      <article class="card card--glass"><span class="card__num">Always on</span><h3 class="h-sm">One accountable lead</h3><p>A single engagement lead across all five stages — the person you call when something is on fire at 11pm, and the one who reports on it the next morning.</p></article>
+    <div class="grid grid--3">
+      <article class="card card--glass spot" data-reveal="up"><span class="card__num">Stage 01</span><h3 class="h-sm">Discovery call</h3><p>30 minutes, no charge. We map the problem, the systems involved and what "done" looks like to you. You leave with an opinion, whether or not you hire us.</p></article>
+      <article class="card card--glass spot" data-reveal="up"><span class="card__num">Stage 02</span><h3 class="h-sm">Assessment</h3><p>One to two weeks. Current-state review, risk register, target architecture and a costed plan with options — not a single take-it-or-leave-it number.</p></article>
+      <article class="card card--glass spot" data-reveal="up"><span class="card__num">Stage 03</span><h3 class="h-sm">Build</h3><p>Two-week sprints, a demo at the end of each, and a shared board you can open any time. Changes are priced as they arise, not bundled into a surprise.</p></article>
+      <article class="card card--glass spot" data-reveal="up"><span class="card__num">Stage 04</span><h3 class="h-sm">Cutover</h3><p>Parallel runs, reconciliation, rollback plan, hypercare. We do not consider a migration finished until the old system has been dark for a full cycle.</p></article>
+      <article class="card card--glass spot" data-reveal="up"><span class="card__num">Stage 05</span><h3 class="h-sm">Run or hand over</h3><p>Managed support on an SLA, or a structured handover to your team with training and runbooks. Your call, made at the start, not the end.</p></article>
+      <article class="card card--glass spot" data-reveal="up"><span class="card__num">Always on</span><h3 class="h-sm">One accountable lead</h3><p>A single engagement lead across all five stages — the person you call when something is on fire at 11pm, and the one who reports on it the next morning.</p></article>
     </div>
   </div>
 </section>
@@ -674,94 +739,215 @@
 <!-- ============================ INDUSTRIES ============================ -->
 <section class="section">
   <div class="wrap">
-    <div class="split">
-      <div class="reveal">
-        <span class="eyebrow">Industries</span>
-        <h2 class="h-xl">Domain context, not just platform skill</h2>
-        <p class="lede mt-16">A Snowflake model for a hospital network and one for a distributor look nothing alike. Our consultants carry the domain vocabulary — regulatory constraints, standard data structures, the reports the business actually runs on.</p>
-        <a class="link mt-24" href="industries.html">All industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-      <div class="grid grid--2 reveal" data-delay="90">
-        <div class="card card--flat"><h3 class="h-sm">Healthcare &amp; life sciences</h3><p>HIPAA-aware data platforms, patient 360, clinical and claims reporting.</p></div>
-        <div class="card card--flat"><h3 class="h-sm">Banking &amp; insurance</h3><p>Risk and regulatory reporting, claims automation, core system integration.</p></div>
-        <div class="card card--flat"><h3 class="h-sm">Retail &amp; e-commerce</h3><p>Customer 360, demand forecasting, marketplace and OMS integration.</p></div>
-        <div class="card card--flat"><h3 class="h-sm">Manufacturing &amp; supply chain</h3><p>Plant and ERP data unification, quality analytics, supplier portals.</p></div>
-        <div class="card card--flat"><h3 class="h-sm">Technology &amp; SaaS</h3><p>Usage analytics, billing data, product telemetry and go-to-market ops.</p></div>
-        <div class="card card--flat"><h3 class="h-sm">Professional services</h3><p>Resource and utilisation reporting, CRM hygiene, proposal automation.</p></div>
-      </div>
+    <div class="section__head" data-reveal="up">
+      <span class="eyebrow">Industries</span>
+      <h2 class="h-xl">Domain context, not just platform skill</h2>
+      <p class="lede mt-16">A Snowflake model for a hospital network and one for a distributor look nothing alike. Our consultants carry the domain vocabulary — regulatory constraints, standard data structures, the reports the business actually runs on.</p>
+    </div>
+
+    <div class="grid grid--3">
+      <a class="card card--media card--glow" href="industries.html" data-reveal="up">
+        <div class="media media--3-2">
+          <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=760&q=70&auto=format&fit=crop"
+               alt="A clean, modern hospital operating theatre" loading="lazy" decoding="async" width="760" height="507">
+          <span class="media__badge">Healthcare</span>
+        </div>
+        <div class="card__body">
+          <h3 class="h-sm">Healthcare &amp; life sciences</h3>
+          <p>HIPAA-aware data platforms, patient 360, claims and clinical reporting with reconciliation built in.</p>
+        </div>
+      </a>
+
+      <a class="card card--media card--glow" href="industries.html" data-reveal="up">
+        <div class="media media--3-2 media--violet">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=760&q=70&auto=format&fit=crop"
+               alt="Glass office towers seen from below" loading="lazy" decoding="async" width="760" height="507">
+          <span class="media__badge">Banking &amp; insurance</span>
+        </div>
+        <div class="card__body">
+          <h3 class="h-sm">Banking, financial services &amp; insurance</h3>
+          <p>Risk and regulatory reporting with full lineage, claims automation and core system integration.</p>
+        </div>
+      </a>
+
+      <a class="card card--media card--glow" href="industries.html" data-reveal="up">
+        <div class="media media--3-2 media--mint">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=760&q=70&auto=format&fit=crop"
+               alt="Interior of a modern retail store" loading="lazy" decoding="async" width="760" height="507">
+          <span class="media__badge">Retail</span>
+        </div>
+        <div class="card__body">
+          <h3 class="h-sm">Retail &amp; e-commerce</h3>
+          <p>Customer 360 across POS, e-commerce and loyalty, demand forecasting and OMS integration.</p>
+        </div>
+      </a>
+
+      <a class="card card--media card--glow" href="industries.html" data-reveal="up">
+        <div class="media media--3-2">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=760&q=70&auto=format&fit=crop"
+               alt="Sparks from welding work on a factory floor" loading="lazy" decoding="async" width="760" height="507">
+          <span class="media__badge">Manufacturing</span>
+        </div>
+        <div class="card__body">
+          <h3 class="h-sm">Manufacturing &amp; supply chain</h3>
+          <p>Oracle EBS and Fusion support, plant and ERP data unified, month-end close acceleration.</p>
+        </div>
+      </a>
+
+      <a class="card card--media card--glow" href="industries.html" data-reveal="up">
+        <div class="media media--3-2 media--violet">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=760&q=70&auto=format&fit=crop"
+               alt="Analytics dashboards open on a laptop" loading="lazy" decoding="async" width="760" height="507">
+          <span class="media__badge">Technology</span>
+        </div>
+        <div class="card__body">
+          <h3 class="h-sm">Technology &amp; SaaS</h3>
+          <p>Product telemetry, billing and subscription modelling, and AI features shipped with cost control.</p>
+        </div>
+      </a>
+
+      <a class="card card--media card--glow" href="industries.html" data-reveal="up">
+        <div class="media media--3-2 media--mint">
+          <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=760&q=70&auto=format&fit=crop"
+               alt="An open-plan professional office with city views" loading="lazy" decoding="async" width="760" height="507">
+          <span class="media__badge">Professional services</span>
+        </div>
+        <div class="card__body">
+          <h3 class="h-sm">Professional &amp; business services</h3>
+          <p>Utilisation and pipeline reporting leadership trusts, CRM hygiene, proposal automation.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="btn-row center mt-48" data-reveal="up" style="justify-content:center">
+      <a class="btn btn--ghost" href="industries.html">All industries in detail</a>
     </div>
   </div>
 </section>
 
 <!-- ============================ WORK TEASER ============================ -->
-<section class="section section--soft">
+<section class="section section--soft has-bg">
+  <div class="tex-dots tex-dots--light" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="section__head reveal">
+    <div class="section__head" data-reveal="up">
       <span class="eyebrow">Selected work</span>
       <h2 class="h-xl">What the engagements look like</h2>
       <p class="lede mt-16">Representative engagements, anonymised at the client's request. Numbers are what the client measured after go-live.</p>
     </div>
 
     <div class="grid grid--3">
-      <article class="card reveal">
-        <div class="badge-row"><span class="badge badge--soft">Snowflake</span><span class="badge badge--soft">dbt</span></div>
-        <h3 class="h-sm mt-16">Teradata to Snowflake for a US healthcare payer</h3>
-        <p>Eleven years of claims history migrated with a nine-week parallel run and zero reconciliation breaks at cutover.</p>
-        <div class="kpi"><div><b>-58%</b><span>platform run cost</span></div><div><b>4.2x</b><span>faster nightly load</span></div></div>
-        <a class="link" href="work.html">Read the engagement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </article>
+      <a class="card card--media card--glow" href="work.html" data-reveal="up">
+        <div class="media media--16-9">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=760&q=70&auto=format&fit=crop"
+               alt="Data centre racks with fibre cabling" loading="lazy" decoding="async" width="760" height="428">
+        </div>
+        <div class="card__body">
+          <div class="badge-row"><span class="badge badge--soft">Snowflake</span><span class="badge badge--soft">dbt</span></div>
+          <h3 class="h-sm mt-16">Teradata to Snowflake for a US healthcare payer</h3>
+          <p>Eleven years of claims history migrated with a nine-week parallel run and zero reconciliation breaks at cutover.</p>
+          <div class="kpi"><div><b>-58%</b><span>platform run cost</span></div><div><b>4.2x</b><span>faster nightly load</span></div></div>
+          <span class="link">Read the engagement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
 
-      <article class="card reveal" data-delay="70">
-        <div class="badge-row"><span class="badge badge--soft">Salesforce</span><span class="badge badge--soft">Deft AI</span></div>
-        <h3 class="h-sm mt-16">Agentforce triage for a B2B software firm</h3>
-        <p>Support cases routed and drafted by an agent grounded in the knowledge base, with a human approving every outbound reply.</p>
-        <div class="kpi"><div><b>-41%</b><span>first response time</span></div><div><b>92%</b><span>routing accuracy</span></div></div>
-        <a class="link" href="work.html">Read the engagement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </article>
+      <a class="card card--media card--glow" href="work.html" data-reveal="up">
+        <div class="media media--16-9 media--violet">
+          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=760&q=70&auto=format&fit=crop"
+               alt="Macro photograph of a circuit board" loading="lazy" decoding="async" width="760" height="428">
+        </div>
+        <div class="card__body">
+          <div class="badge-row"><span class="badge badge--soft">Salesforce</span><span class="badge badge--soft">Deft AI</span></div>
+          <h3 class="h-sm mt-16">Agentforce triage for a B2B software firm</h3>
+          <p>Support cases routed and drafted by an agent grounded in the knowledge base, with a human approving every outbound reply.</p>
+          <div class="kpi"><div><b>-41%</b><span>first response time</span></div><div><b>92%</b><span>routing accuracy</span></div></div>
+          <span class="link">Read the engagement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
 
-      <article class="card reveal" data-delay="140">
-        <div class="badge-row"><span class="badge badge--soft">Oracle</span><span class="badge badge--soft">Java</span></div>
-        <h3 class="h-sm mt-16">EBS stabilisation and OCI move for a manufacturer</h3>
-        <p>A fragile on-prem EBS estate lifted to OCI, with the worst-performing PL/SQL rewritten and a Java integration layer added.</p>
-        <div class="kpi"><div><b>-73%</b><span>month-end close time</span></div><div><b>99.9%</b><span>uptime since cutover</span></div></div>
-        <a class="link" href="work.html">Read the engagement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </article>
+      <a class="card card--media card--glow" href="work.html" data-reveal="up">
+        <div class="media media--16-9 media--mint">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=760&q=70&auto=format&fit=crop"
+               alt="Industrial welding work throwing sparks" loading="lazy" decoding="async" width="760" height="428">
+        </div>
+        <div class="card__body">
+          <div class="badge-row"><span class="badge badge--soft">Oracle</span><span class="badge badge--soft">Java</span></div>
+          <h3 class="h-sm mt-16">EBS stabilisation and OCI move for a manufacturer</h3>
+          <p>A fragile on-prem EBS estate lifted to OCI, with the worst-performing PL/SQL rewritten and a Java integration layer added.</p>
+          <div class="kpi"><div><b>-73%</b><span>month-end close time</span></div><div><b>99.9%</b><span>uptime since cutover</span></div></div>
+          <span class="link">Read the engagement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- ============================ GLOBAL FOOTPRINT ============================ -->
-<section class="section section--dark">
+<section class="section section--dark has-bg">
+  <div class="photo-bg" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=70&auto=format&fit=crop"
+         alt="" loading="lazy" decoding="async" width="1920" height="1080">
+  </div>
   <div class="wrap">
-    <div class="section__head reveal">
+    <div class="section__head" data-reveal="up">
       <span class="eyebrow">Global footprint</span>
       <h2 class="h-xl">Headquartered in Texas. Built in India.</h2>
       <p class="lede mt-16">Client-facing leadership and architecture sit in the US. Engineering scale sits in Hyderabad, Pune and Bengaluru. One delivery organisation, one set of standards, and enough overlap that nothing waits a full day for an answer.</p>
     </div>
 
-    <div class="grid grid--4">
-      <div class="office reveal">
+    <!-- follow-the-sun infographic -->
+    <div class="card card--glass card--pad-lg" data-reveal="up">
+      <span class="card__num">Follow the sun · a working day in CST</span>
+      <h3 class="h-md">Work handed off at 6pm is progressed overnight and reviewed at your 9am</h3>
+      <div class="tz">
+        <div class="tz__row">
+          <span class="tz__lbl">India</span>
+          <span class="tz__track">
+            <span class="tz__band tz__band--in" style="left:0;width:37.5%">Hyderabad · Pune · Bengaluru</span>
+            <span class="tz__band tz__band--in" style="left:87.5%;width:12.5%"></span>
+          </span>
+        </div>
+        <div class="tz__row">
+          <span class="tz__lbl">Overlap</span>
+          <span class="tz__track">
+            <span class="tz__band tz__band--ov" style="left:31.25%;width:12.5%">Shared window</span>
+          </span>
+        </div>
+        <div class="tz__row">
+          <span class="tz__lbl">US</span>
+          <span class="tz__track">
+            <span class="tz__band tz__band--us" style="left:33.33%;width:41.67%">Frisco, Texas</span>
+          </span>
+        </div>
+        <div class="tz__scale" aria-hidden="true">
+          <span>00</span><span>03</span><span>06</span><span>09</span><span>12</span><span>15</span><span>18</span><span>21</span>
+        </div>
+      </div>
+      <p class="small mt-16">Around 20 hours of every working day are covered by one team or the other, with a daily shared window between the US morning and the Indian evening for live design and review.</p>
+    </div>
+
+    <div class="grid grid--4 mt-48">
+      <div class="office spot" data-reveal="up">
         <span class="office__flag" aria-hidden="true">🇺🇸</span>
         <span class="office__tag office__tag--hq">Headquarters</span>
         <h3>Frisco, Texas</h3>
         <address>2591 Dallas Parkway, Suite 300<br>Frisco, TX 75034<br>United States</address>
         <div class="office__meta"><a href="tel:+14699130142">+1 (469) 913-0142</a><a href="mailto:satyamt37@gmail.com">satyamt37@gmail.com</a></div>
       </div>
-      <div class="office reveal" data-delay="70">
+      <div class="office spot" data-reveal="up">
         <span class="office__flag" aria-hidden="true">🇮🇳</span>
         <span class="office__tag">Delivery centre</span>
         <h3>Hyderabad</h3>
         <address>Level 4, Knowledge City<br>Raidurg, HITEC City<br>Hyderabad 500081</address>
         <div class="office__meta"><a href="tel:+918959459494">+91 89594 59494</a><span class="muted">Salesforce &amp; Data</span></div>
       </div>
-      <div class="office reveal" data-delay="140">
+      <div class="office spot" data-reveal="up">
         <span class="office__flag" aria-hidden="true">🇮🇳</span>
         <span class="office__tag">Delivery centre</span>
         <h3>Pune</h3>
         <address>Business Bay, Hinjawadi Phase 1<br>Pune 411057<br>Maharashtra</address>
         <div class="office__meta"><a href="tel:+918959459494">+91 89594 59494</a><span class="muted">Oracle &amp; Java</span></div>
       </div>
-      <div class="office reveal" data-delay="210">
+      <div class="office spot" data-reveal="up">
         <span class="office__flag" aria-hidden="true">🇮🇳</span>
         <span class="office__tag">Delivery centre</span>
         <h3>Bengaluru</h3>
@@ -775,13 +961,13 @@
 <!-- ============================ TESTIMONIALS ============================ -->
 <section class="section">
   <div class="wrap">
-    <div class="section__head center reveal">
+    <div class="section__head center" data-reveal="up">
       <span class="eyebrow">Client voices</span>
       <h2 class="h-xl">What people say after go-live</h2>
     </div>
 
     <div class="quotes">
-      <article class="quote reveal">
+      <article class="quote spot" data-reveal="up">
         <div class="quote__stars" aria-label="5 out of 5">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -793,7 +979,7 @@
         <div class="quote__by"><span class="avatar" aria-hidden="true">DR</span><div><b>Director of Data Engineering</b><span>Healthcare payer, Midwest US</span></div></div>
       </article>
 
-      <article class="quote reveal" data-delay="70">
+      <article class="quote spot" data-reveal="up">
         <div class="quote__stars" aria-label="5 out of 5">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -805,7 +991,7 @@
         <div class="quote__by"><span class="avatar avatar--b" aria-hidden="true">VP</span><div><b>VP Customer Operations</b><span>B2B software, Austin TX</span></div></div>
       </article>
 
-      <article class="quote reveal" data-delay="140">
+      <article class="quote spot" data-reveal="up">
         <div class="quote__stars" aria-label="5 out of 5">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -825,12 +1011,12 @@
 <!-- ============================ FAQ ============================ -->
 <section class="section section--soft">
   <div class="wrap wrap--narrow">
-    <div class="section__head center reveal">
+    <div class="section__head center" data-reveal="up">
       <span class="eyebrow">Common questions</span>
       <h2 class="h-xl">Before you get in touch</h2>
     </div>
 
-    <div class="acc reveal">
+    <div class="acc" data-reveal="up">
       <div class="acc__item" data-open>
         <button class="acc__btn" type="button" aria-expanded="false">How quickly can you start?<span class="acc__ic" aria-hidden="true"></span></button>
         <div class="acc__panel"><div class="acc__inner"><p>Staff augmentation and job support usually start within a week. A dedicated pod takes two to three weeks to assemble properly. Fixed-scope projects start after the assessment, which is typically one to two weeks from the signed engagement letter.</p></div></div>
@@ -860,18 +1046,18 @@
 </section>
 
 <!-- ============================ CTA ============================ -->
-<section class="cta">
-  <div class="cta__glow" aria-hidden="true"></div>
+<section class="cta has-bg">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap cta__in">
-    <h2 class="h-xl">Tell us what is stuck. We will tell you what it takes.</h2>
-    <p class="lede">Thirty minutes with a senior consultant — not a salesperson. You will leave with a point of view on scope, sequence and rough cost, whether or not you work with us.</p>
-    <div class="btn-row">
+    <h2 class="h-xl" data-reveal="up">Tell us what is stuck. We will tell you what it takes.</h2>
+    <p class="lede" data-reveal="up">Thirty minutes with a senior consultant — not a salesperson. You will leave with a point of view on scope, sequence and rough cost, whether or not you work with us.</p>
+    <div class="btn-row" data-reveal="up">
       <a class="btn btn--primary" href="contact.html">Start a conversation
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
       <a class="btn btn--ghost-inv" href="mailto:satyamt37@gmail.com">Email us directly</a>
     </div>
-    <div class="cta__meta">
+    <div class="cta__meta" data-reveal="up">
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Reply within one business day</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>NDA before anything sensitive</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No obligation, no follow-up spam</span>
@@ -971,7 +1157,9 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
 </button>
 
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
 <script src="assets/js/config.js"></script>
+<script src="assets/js/motion.js" defer></script>
 <script src="assets/js/site.js" defer></script>
 </body>
 </html>

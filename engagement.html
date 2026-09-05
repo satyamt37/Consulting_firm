@@ -29,6 +29,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 
@@ -62,6 +64,10 @@
 <body>
 
 <a class="skip" href="#main">Skip to content</a>
+
+<!-- scroll progress + film grain -->
+<div class="progress" aria-hidden="true"><div class="progress__bar"></div></div>
+<div class="grain" aria-hidden="true"></div>
 
 <!-- ====================== ANNOUNCEMENT ====================== -->
 <div class="announce">
@@ -190,6 +196,9 @@
 <main id="main">
 <!-- ============================ PAGE HERO ============================ -->
 <section class="phero">
+  <div class="photo-bg" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=70&auto=format&fit=crop" alt="" loading="eager" fetchpriority="high" decoding="async" width="1920" height="1080">
+  </div>
   <div class="hero__bg" aria-hidden="true">
     <div class="hero__grid"></div>
     <div class="hero__glow hero__glow--a"></div>
@@ -297,7 +306,7 @@
         <div class="btn-row mt-32"><a class="btn btn--dark" href="contact.html?intent=project">Request a project quote</a></div>
       </div>
       <div class="reveal" data-delay="90">
-        <div class="card card--pad-lg">
+        <div class="card spot card--pad-lg">
           <span class="card__num">How a quote is built</span>
           <div class="dl">
             <div class="dl__row"><dt>Step 1</dt><dd>Discovery call, no charge. We establish whether the scope can honestly be fixed, or whether time-and-materials serves you better.</dd></div>
@@ -317,10 +326,10 @@
   <div class="wrap">
     <div class="split split--wide-r split--flip">
       <div class="grid grid--2 reveal">
-        <div class="card card--flat"><h3 class="h-sm">Starter pod</h3><p>Three engineers plus a part-time tech lead. Enough to hold a product area or a data platform backlog.</p><div class="tags"><span class="tag tag--brand">3 + lead</span></div></div>
-        <div class="card card--flat"><h3 class="h-sm">Delivery pod</h3><p>Five to six engineers, a full-time lead and a shared QA resource. The most common shape we run.</p><div class="tags"><span class="tag tag--brand">5–6 + lead</span></div></div>
-        <div class="card card--flat"><h3 class="h-sm">Platform pod</h3><p>Eight people spanning data engineering, application and DevOps for a full platform build.</p><div class="tags"><span class="tag tag--brand">8 + lead</span></div></div>
-        <div class="card card--flat"><h3 class="h-sm">Blended pod</h3><p>US architect plus an India engineering core. Onshore accountability at an offshore blended rate.</p><div class="tags"><span class="tag tag--mint">Popular</span></div></div>
+        <div class="card spot card--flat"><h3 class="h-sm">Starter pod</h3><p>Three engineers plus a part-time tech lead. Enough to hold a product area or a data platform backlog.</p><div class="tags"><span class="tag tag--brand">3 + lead</span></div></div>
+        <div class="card spot card--flat"><h3 class="h-sm">Delivery pod</h3><p>Five to six engineers, a full-time lead and a shared QA resource. The most common shape we run.</p><div class="tags"><span class="tag tag--brand">5–6 + lead</span></div></div>
+        <div class="card spot card--flat"><h3 class="h-sm">Platform pod</h3><p>Eight people spanning data engineering, application and DevOps for a full platform build.</p><div class="tags"><span class="tag tag--brand">8 + lead</span></div></div>
+        <div class="card spot card--flat"><h3 class="h-sm">Blended pod</h3><p>US architect plus an India engineering core. Onshore accountability at an offshore blended rate.</p><div class="tags"><span class="tag tag--mint">Popular</span></div></div>
       </div>
       <div class="reveal" data-delay="90">
         <span class="eyebrow">Model 02</span>
@@ -340,7 +349,8 @@
 </section>
 
 <!-- ============================ STAFFING ============================ -->
-<section class="section section--dark" id="staffing">
+<section class="section section--dark has-bg" id="staffing">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap">
     <div class="split split--wide-l">
       <div class="reveal">
@@ -360,7 +370,7 @@
         </div>
       </div>
       <div class="reveal" data-delay="90">
-        <div class="card card--glass card--pad-lg">
+        <div class="card spot card--glass card--pad-lg">
           <span class="card__num">Roles we place most</span>
           <div class="grid grid--2 mt-16">
             <div><h4 class="h-sm">Platform</h4><ul class="ticks"><li>Salesforce developer / admin</li><li>Salesforce technical architect</li><li>Snowflake data engineer</li><li>Oracle Fusion functional consultant</li><li>Oracle DBA and PL/SQL developer</li></ul></div>
@@ -382,21 +392,21 @@
     </div>
 
     <div class="grid grid--3">
-      <article class="card reveal">
+      <article class="card spot reveal">
         <span class="card__ic card__ic--violet" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
         <h3 class="h-sm">How sessions run</h3>
         <p>Screen-share with one consultant who knows the technology in production, not from a course. You drive; they guide, review and explain the reasoning so it sticks.</p>
         <ul class="ticks"><li>60 or 90 minute sessions</li><li>Evenings IST or CST, weekends available</li><li>Same consultant throughout</li></ul>
       </article>
 
-      <article class="card reveal" data-delay="70">
+      <article class="card spot reveal" data-delay="70">
         <span class="card__ic card__ic--violet" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg></span>
         <h3 class="h-sm">Technologies covered</h3>
         <p>The same stacks we deliver on. If we would not staff it on a client project, we do not offer support for it.</p>
         <div class="tags"><span class="tag">Salesforce</span><span class="tag">Snowflake</span><span class="tag">Oracle</span><span class="tag">Java</span><span class="tag">Python</span><span class="tag">React</span><span class="tag">PHP</span><span class="tag">dbt</span><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">AI / LLM</span></div>
       </article>
 
-      <article class="card reveal" data-delay="140">
+      <article class="card spot reveal" data-delay="140">
         <span class="card__ic card__ic--violet" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
         <h3 class="h-sm">Plans</h3>
         <p>Start with a single paid session to check the fit. Most people then move to a monthly plan and taper off after eight to twelve weeks — which is the point.</p>
@@ -405,7 +415,7 @@
     </div>
 
     <div class="split mt-48">
-      <div class="card card--feature card--pad-lg reveal">
+      <div class="card spot card--feature card--pad-lg reveal">
         <span class="card__num">Where we draw the line</span>
         <h3 class="h-md">What job support is not</h3>
         <p class="mt-16">We are direct about this because the term gets used loosely in this market, and because getting it wrong can cost someone their job.</p>
@@ -424,6 +434,10 @@
           <div class="step"><h4 class="h-sm">A stack change mid-career</h4><p>Moving from Oracle to Snowflake, or from Java to Salesforce. The concepts transfer; the idioms and the traps do not.</p></div>
           <div class="step"><h4 class="h-sm">The only specialist in the building</h4><p>You are the entire data team. Job support gives you the senior colleague your organisation chart does not.</p></div>
           <div class="step"><h4 class="h-sm">A one-off deadline</h4><p>A migration weekend, a release, a production incident post-mortem. Book a few sessions and stop.</p></div>
+        </div>
+        <div class="media media--3-2 media--lift mt-32">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1000&q=70&auto=format&fit=crop" alt="A developer working through a problem at a laptop" loading="lazy" decoding="async" width="1000" height="667">
+          <span class="media__cap"><b>Your evening, their expertise</b>Screen-share sessions with a practitioner who runs this stack in production.</span>
         </div>
         <div class="btn-row mt-32"><a class="btn btn--primary" href="contact.html?intent=job-support">Ask about job support</a></div>
       </div>
@@ -446,20 +460,25 @@
           <li>Code, credentials and documentation handed over at the end. Everything is yours.</li>
           <li>We will tell you if the job is too small to be worth our fee, and point you elsewhere</li>
         </ul>
+        <div class="media media--3-2 media--mint media--lift mt-32">
+          <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=1000&q=70&auto=format&fit=crop" alt="A focused workspace with a laptop and notes" loading="lazy" decoding="async" width="1000" height="667">
+          <span class="media__cap"><b>One task, one quote, one finish line</b>No procurement cycle, no minimum contract value.</span>
+        </div>
         <div class="btn-row mt-32"><a class="btn btn--dark" href="contact.html?intent=freelance">Send a freelance brief</a></div>
       </div>
       <div class="grid grid--2 reveal" data-delay="90">
-        <div class="card"><h3 class="h-sm">Typical: days</h3><p>A stubborn Apex bug. A Snowflake query rewritten to stop timing out. A Power BI report nobody can reproduce. A page failing Core Web Vitals.</p></div>
-        <div class="card"><h3 class="h-sm">Typical: 1–2 weeks</h3><p>An API integration between two systems. A dbt model layer for one domain. A React screen. A WordPress to static migration.</p></div>
-        <div class="card"><h3 class="h-sm">Typical: 3–6 weeks</h3><p>A small internal app in APEX or Laravel. An AI proof of concept over your documents. A marketing site with technical SEO done properly.</p></div>
-        <div class="card"><h3 class="h-sm">What we ask of you</h3><p>A clear brief, one decision-maker, and access on day one. Freelance pricing works because the overhead is low — delays and committee reviews are what break it.</p></div>
+        <div class="card spot"><h3 class="h-sm">Typical: days</h3><p>A stubborn Apex bug. A Snowflake query rewritten to stop timing out. A Power BI report nobody can reproduce. A page failing Core Web Vitals.</p></div>
+        <div class="card spot"><h3 class="h-sm">Typical: 1–2 weeks</h3><p>An API integration between two systems. A dbt model layer for one domain. A React screen. A WordPress to static migration.</p></div>
+        <div class="card spot"><h3 class="h-sm">Typical: 3–6 weeks</h3><p>A small internal app in APEX or Laravel. An AI proof of concept over your documents. A marketing site with technical SEO done properly.</p></div>
+        <div class="card spot"><h3 class="h-sm">What we ask of you</h3><p>A clear brief, one decision-maker, and access on day one. Freelance pricing works because the overhead is low — delays and committee reviews are what break it.</p></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============================ RATES ============================ -->
-<section class="section section--ink2" id="rates">
+<section class="section section--ink2 has-bg" id="rates">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap">
     <div class="section__head reveal">
       <span class="eyebrow">Commercials</span>
@@ -486,17 +505,17 @@
     <p class="table-note">Indicative ranges in USD, valid for engagements quoted in 2026. Indian clients are quoted in INR at an equivalent local rate. Rates exclude taxes, travel and third-party licences.</p>
 
     <div class="grid grid--3 mt-48">
-      <article class="card card--glass reveal">
+      <article class="card spot card--glass reveal">
         <span class="card__num">Lever 01</span>
         <h3 class="h-sm">Duration</h3>
         <p>A three-month commitment earns a better rate than a two-week one, and a twelve-month pod better still. Discounts are written into the agreement, not offered as a negotiation trick at signature.</p>
       </article>
-      <article class="card card--glass reveal" data-delay="70">
+      <article class="card spot card--glass reveal" data-delay="70">
         <span class="card__num">Lever 02</span>
         <h3 class="h-sm">Location mix</h3>
         <p>Most clients land on blended: an onshore architect and engagement lead with an offshore engineering core. You get an accountable person in your timezone at close to offshore economics.</p>
       </article>
-      <article class="card card--glass reveal" data-delay="140">
+      <article class="card spot card--glass reveal" data-delay="140">
         <span class="card__num">Lever 03</span>
         <h3 class="h-sm">Seniority mix</h3>
         <p>Not every task needs a principal. We propose the leanest mix that will still deliver, and we show you the composition so you can challenge it.</p>
@@ -544,8 +563,8 @@
 </section>
 
 <!-- ============================ CTA ============================ -->
-<section class="cta">
-  <div class="cta__glow" aria-hidden="true"></div>
+<section class="cta has-bg">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap cta__in">
     <h2 class="h-xl">Tell us the shape of the problem</h2>
     <p class="lede">We will recommend the engagement model that fits — even when it is the smallest one. Rough numbers on the first call, a written quote within three business days.</p>
@@ -648,7 +667,9 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
 </button>
 
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
 <script src="assets/js/config.js"></script>
+<script src="assets/js/motion.js" defer></script>
 <script src="assets/js/site.js" defer></script>
 </body>
 </html>
